@@ -1,0 +1,191 @@
+field: 250107a8-b540-477c-a181-30873966eb94 # Featured
+fieldLayouts:
+  2fa32dae-691d-4229-84e6-3c5a2c39a07a:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 79870395-1b02-475c-a077-89f57505fa69 # Featured Item
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 40d321b8-59ff-47a6-a086-f2f8d7ff49fa
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 082a547a-eb74-4c7c-9ce8-97b9845d4439 # Description
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 24ce9af6-f8f6-49cd-ab0d-96558fa9b445
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 9b737631-86fd-432f-ac74-ddc5a152f5de # Featured Image
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 2df214f4-8d29-4826-87bf-b7ecf1f12341
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 17790c7c-b82b-4627-8987-9ca3ef979f8e # CTA Link
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 7c1bbb67-e603-4192-970f-cd2c269d30a6
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 0b37ef2a-70ba-42fa-9b4f-caa4424fcc39 # CTA Title
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: e93ae7e9-49a3-489e-93ad-c3d0d64d6fd8
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 3e76afd8-65f4-4257-9046-21d1872564c0
+        userCondition: null
+fields:
+  0b37ef2a-70ba-42fa-9b4f-caa4424fcc39: # CTA Title
+    columnSuffix: mrwmpnxi
+    contentColumnType: string(80)
+    fieldGroup: null
+    handle: ctaTitle
+    instructions: 'The button text for the link above.'
+    name: 'CTA Title'
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: 20
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: false
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  9b737631-86fd-432f-ac74-ddc5a152f5de: # Featured Image
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: featuredImage
+    instructions: null
+    name: 'Featured Image'
+    searchable: false
+    settings:
+      allowSelfRelations: false
+      allowSubfolders: false
+      allowUploads: true
+      allowedKinds: null
+      branchLimit: null
+      defaultUploadLocationSource: 'volume:f64689b9-8bca-415d-8d4d-2c18e0697972' # Site Images
+      defaultUploadLocationSubpath: null
+      localizeRelations: false
+      maintainHierarchy: false
+      maxRelations: 1
+      minRelations: 1
+      previewMode: full
+      restrictFiles: false
+      restrictLocation: true
+      restrictedDefaultUploadSubpath: null
+      restrictedLocationSource: 'volume:f64689b9-8bca-415d-8d4d-2c18e0697972' # Site Images
+      restrictedLocationSubpath: null
+      selectionLabel: null
+      showSiteMenu: true
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      sources: '*'
+      targetSiteId: null
+      validateRelatedElements: false
+      viewMode: list
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Assets
+  082a547a-eb74-4c7c-9ce8-97b9845d4439: # Description
+    columnSuffix: kxdwtsum
+    contentColumnType: text
+    fieldGroup: null
+    handle: description
+    instructions: null
+    name: Description
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: 300
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: true
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  17790c7c-b82b-4627-8987-9ca3ef979f8e: # CTA Link
+    columnSuffix: odirrdbp
+    contentColumnType: text
+    fieldGroup: null
+    handle: ctaLink
+    instructions: 'Call to action button link. Optional.'
+    name: 'CTA Link'
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: false
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  79870395-1b02-475c-a077-89f57505fa69: # Featured Item
+    columnSuffix: nrgsbbmq
+    contentColumnType: text
+    fieldGroup: null
+    handle: featuredItem
+    instructions: null
+    name: 'Featured Item'
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: false
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+handle: featuredItem
+name: 'Featured Item'
+sortOrder: 1

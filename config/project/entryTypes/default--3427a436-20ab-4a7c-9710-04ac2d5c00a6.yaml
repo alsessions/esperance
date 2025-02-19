@@ -1,0 +1,155 @@
+fieldLayouts:
+  6683c39a-cf9c-4835-8e94-824a906da84a:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            inputType: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 09266c94-e863-448e-8dd7-46639a8dd898
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: cd418604-ef74-49ca-9305-6d39da27140b # Author
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 861047de-de1c-4ca0-ba06-88e4491979f3
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 66539385-6c72-4d78-a0fc-a965aedc380e # Item Type
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 4cc0b3d2-b8b3-448e-bdca-ecf54244ae86
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 6a4f4a21-a30e-4257-b1e7-8162d57d2529 # Date
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 7c20052f-7219-4cb8-9532-4a3515583459
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: a469f424-e319-400f-baca-d767dfe5eae3 # Publisher
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: b4406276-8bce-413c-9abd-d5c65aa01da9
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 9357eb28-2a22-492e-b3de-bb52da924c4e # City
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 90a76172-3cf3-4310-899e-68289263b12c
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: dba2cec3-c4ee-4cf4-9687-3b5015ec67f5 # ISBN Number
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: de2c8a41-8fd9-40a8-b1d7-ad4808cc35b6
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: be49da65-20ec-4afc-a639-0712e9603fe4 # Storage Location
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: c5b4c7b1-f34b-427d-b986-2e32dc8d5715
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: ec86cbbd-ed49-48dc-b878-b1037106f0bd # Call Number
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 7044bf6a-b58b-4e39-bea0-6efd540739f5
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 3b3bb20a-513a-430e-a43f-3b739a8912b0 # Accession #
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 5692040f-c55e-4b0f-ae17-d0a5ac50ae37
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 5543f813-4b1d-41e5-9bda-fe32c94b04be
+        userCondition: null
+handle: default
+hasTitleField: true
+name: Default
+section: b24e5aba-18dc-4cb9-bf71-035e940001bd # Books
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+sortOrder: 1
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

@@ -1,0 +1,24 @@
+columnSuffix: mvbftlhw
+contentColumnType: text
+fieldGroup: fc60fa7d-ed36-45c2-9c49-d8ef1d0082d4 # Common
+handle: text
+instructions: 'Plain text, markdown is enabled.'
+name: Text
+searchable: false
+settings:
+  availableTransforms: '*'
+  availableVolumes: '*'
+  ckeConfig: ef049fa2-931e-4e6b-924b-9a9a8494c2f9 # Simple
+  columnType: text
+  defaultTransform: null
+  purifierConfig: null
+  purifyHtml: true
+  showUnpermittedFiles: false
+  showUnpermittedVolumes: false
+  showWordCount: false
+  sourceEditingGroups:
+    - __ADMINS__
+  wordLimit: null
+translationKeyFormat: null
+translationMethod: none
+type: craft\ckeditor\Field

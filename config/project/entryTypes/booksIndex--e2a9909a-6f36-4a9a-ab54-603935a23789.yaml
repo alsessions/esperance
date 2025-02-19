@@ -1,0 +1,59 @@
+fieldLayouts:
+  88f577b3-9b68-48ab-9c18-e5faf86888c4:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            inputType: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 0f822a4c-a062-4079-abf0-3defd77a6ded
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 0d967ad9-7e46-4156-a765-597a9136ca13 # Subtitle
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: bb2cc8ad-5b61-4be9-971a-388c6c827f45
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: a370fe02-e56d-4bd2-83d8-83ea082f1908
+        userCondition: null
+handle: booksIndex
+hasTitleField: true
+name: 'Books Index'
+section: 1581d0cd-fc5f-4e4e-a3eb-31a021bcd969 # Books Index
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+sortOrder: 1
+titleFormat: '{section.name|raw}'
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

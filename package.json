@@ -1,0 +1,15 @@
+{
+  "name": "esperance",
+  "scripts": {
+    "watch": "npx tailwindcss -i ./src/css/tailwind.css -o ./web/css/styles.css --jit --content './templates/**/*.twig' -w",
+    "build": "npx tailwindcss -i ./src/css/tailwind.css -o ./web/css/styles.css  --jit --content './templates/**/*.twig' -m"
+  },
+  "dependencies": {
+    "postcss": "^8.4.5",
+    "tailwindcss": "^3.2.6"
+  },
+  "devDependencies": {
+    "@tailwindcss/forms": "^0.5.3",
+    "@tailwindcss/typography": "^0.5.9"
+  }
+}

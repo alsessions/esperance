@@ -1,0 +1,53 @@
+{% include '_partials/_head.twig' %}
+
+<body class="bg-zinc-50">
+{% include '_partials/_nav2.twig' %}
+<main class="max-w-6xl mx-auto pb-20  px-4 min-h-screen ">
+<div class="my-20 max-w-6xl mx-auto px-4 prose md:prose-lg">
+
+	<div class="max-w-6xl grid grid-cols-1 md:grid-cols-2 gap-10 prose-a:font-semibold">
+		<div class="order-last md:order-first">
+		<h1>{{ entry.title | widont }}</h1>
+
+
+		{{ entry.formattedText }}
+
+	</div>
+	<div>
+		<img src="images/museum-sign.jpg" class="rounded shadow" alt="Esperance Museum sign image.">
+	</div>
+</div>
+
+
+
+		<div class="grid md:grid-cols-2 gap-10 mx-auto prose prose-lg prose-headings:text-yellow-900 prose-h2:mt-4 max-w-none">
+			<div>
+
+				<h2>Fostering Community</h2>
+					<p>The Museum and Historical Society <a href="/news">holds events</a> throughout the year and is dependent on <a href="/support">support</a> from the community.</p>
+					<p>You can keep in touch with us on <a href="https://facebook.com/#">Facebook</a> or <a href="/contact">drop us a line</a> with any questions.</p>
+
+			</div>
+			<div>
+
+				
+				<h2>Board of Directors</h2>
+				Willard Martin<br>
+Sandra Farah<br>
+Andrea Oliver<br>
+Janet Fritz<br>
+Karen Bruhn<br>
+Brenda Hewett<br>
+Dr. Victoria Rose O'Milne, PhD.<br>
+Kenneth Jones<br>
+Dr. Thomas H. Slater, PhD.<br>
+Kirtland Feuz<br>
+Patricia Eaton<br>
+			</div>
+		</div>
+
+
+	</div>
+
+</main>
+{% include '_partials/_footer.twig' %}

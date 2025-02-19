@@ -1,0 +1,95 @@
+field: b5e2f021-7a67-4ad3-89b2-c1158786081d # Blog Post
+fieldLayouts:
+  95ba0e7b-d998-484a-af01-542bc5f5bae7:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 5f954e99-bf5d-444a-9fd3-0fd68c956860 # Image
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 0d891cf7-71e4-487f-b6b9-4e868b553a7d
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 0c2509f8-2d7d-4907-95ea-0c376c75df50 # Caption
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: a4afec4c-07d6-4590-a2b2-c083e5e80271
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 29d5447d-2dbe-478c-bf2f-9ec928e0294d
+        userCondition: null
+fields:
+  0c2509f8-2d7d-4907-95ea-0c376c75df50: # Caption
+    columnSuffix: waiqzuqn
+    contentColumnType: text
+    fieldGroup: null
+    handle: caption
+    instructions: null
+    name: Caption
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: false
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  5f954e99-bf5d-444a-9fd3-0fd68c956860: # Image
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: image
+    instructions: null
+    name: Image
+    searchable: false
+    settings:
+      allowSelfRelations: false
+      allowSubfolders: false
+      allowUploads: true
+      allowedKinds: null
+      branchLimit: null
+      defaultUploadLocationSource: 'volume:f64689b9-8bca-415d-8d4d-2c18e0697972' # Site Images
+      defaultUploadLocationSubpath: null
+      localizeRelations: false
+      maintainHierarchy: false
+      maxRelations: 1
+      minRelations: 1
+      previewMode: full
+      restrictFiles: false
+      restrictLocation: false
+      restrictedDefaultUploadSubpath: null
+      restrictedLocationSource: 'volume:f64689b9-8bca-415d-8d4d-2c18e0697972' # Site Images
+      restrictedLocationSubpath: null
+      selectionLabel: null
+      showSiteMenu: true
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      sources: '*'
+      targetSiteId: null
+      validateRelatedElements: false
+      viewMode: list
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Assets
+handle: centeredImage
+name: 'Centered Image'
+sortOrder: 3

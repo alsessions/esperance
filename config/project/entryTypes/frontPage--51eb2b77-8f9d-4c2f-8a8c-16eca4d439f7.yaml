@@ -1,0 +1,59 @@
+fieldLayouts:
+  9a7f448c-c2a1-445c-9e4b-cb3ba9c2b132:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            inputType: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 58753fd5-23c9-4498-9226-6a566568c9fe
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 250107a8-b540-477c-a181-30873966eb94 # Featured
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 46c7afa5-e53c-40f8-a864-a66187289bf3
+            userCondition: null
+            warning: null
+            width: 100
+        name: Featured
+        uid: f63e21ad-1c5b-41f0-a9ee-20b91a463fcf
+        userCondition: null
+handle: frontPage
+hasTitleField: true
+name: 'Front Page'
+section: 5d3bcb0f-894a-46d7-8eab-b51b7c00e500 # Front Page
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+sortOrder: 1
+titleFormat: '{section.name|raw}'
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

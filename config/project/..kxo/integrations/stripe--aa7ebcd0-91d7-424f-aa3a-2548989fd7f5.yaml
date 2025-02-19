@@ -1,0 +1,10 @@
+enabled: '1'
+handle: stripe
+name: Stripe
+settings:
+  publishableKey: null
+  secretKey: null
+  webhookSecretKey: null
+sortOrder: 1
+tokenId: null
+type: verbb\formie\integrations\payments\Stripe

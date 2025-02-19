@@ -1,0 +1,82 @@
+{% include '_partials/_head.twig' %}
+
+<body class="bg-zinc-50">
+    {% include '_partials/_nav2.twig' %}
+    <div class="my-20 grid md:grid-cols-2 max-w-6xl gap-10 mx-auto px-4 prose">
+        <div>
+            <h1 class="text-3xl md:text-5xl  text-yellow-900 not-prose">{{ entry.title | widont }}</h1>
+
+
+            {{ entry.formattedText }}
+        </div>
+        <div>
+            <img src="/images/_576x432_crop_center-center_60_line/museum.jpg.webp" alt="Image of the Esperance Museum">
+        </div>
+    </div>
+    <main class="max-w-6xl mx-auto mb-40  px-4 min-h-screen ">
+        <div class="grid md:grid-cols-2 gap-6 mb-40 mx-auto prose  max-w-none">
+            <div>
+                <h2>Become a Patron</h2>
+                <p>Your business's annual membership in the Esperance Historical Society allows us to preserve and share
+                    Esperance's history.</p>
+
+                <p>Patron benefits include:</p>
+                <ul>
+
+                    <li>Your business name is listed as a patron in our Spring and Fall newsletters</li>
+
+                    <li>Your business is linked to your website on our site's Support page</li>
+
+                    <li>Your business name is displayed as a patron at the Museum's annual "Christmas in Esperance" open
+                        house</li>
+                </ul>
+
+
+                <a href="/contact"><button
+                        class="bg-blue-500 text-white hover:bg-blue-600 font-bold uppercase text-xs px-4 py-2 rounded shadow hover:shadow-md outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+                        type="button">
+                        <i class="fa-solid fa-dollar-sign mr-2"></i>Become a Patron
+                    </button></a>
+            </div>
+
+            <div>
+                <h2>Become a Member</h2>
+                <p>Your annual membership in the Esperance Historical Society will be welcomed and appreciated. </p>
+                <p>To make sure you never miss a thing member benefits include a subscription to The Archive, the
+                    museums newsletter. You can also <a href="/newsletters">view past issues</a>.</p>
+
+
+                <a href="/membership"><button
+                        class="bg-blue-500 text-white hover:bg-blue-600 font-bold uppercase text-xs px-4 py-2 rounded shadow hover:shadow-md outline-none focus:outline-none mr-1  ease-linear transition-all duration-150"
+                        type="button">
+                        <i class="fa-solid fa-dollar-sign mr-2"></i>Become a Member
+                    </button></a>
+            </div>
+
+            <div>
+                <h2>Donate</h2>
+                <p>The Esperance Historical Society and Museum is a 501(c)(3) not for profit organization. All donations
+                    are tax deductible to the full extent of the law.
+                </p>
+
+                <a href="/donate"><button
+                        class="bg-blue-500 text-white hover:bg-blue-600 font-bold uppercase text-xs px-4 py-2 rounded shadow hover:shadow-md outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+                        type="button">
+                        <i class="fa-solid fa-dollar-sign mr-2"></i>Donate Now!
+                    </button></a>
+
+
+
+            </div>
+
+
+        </div>
+
+        <div class="max-w-6xl mx-auto">
+            {% include '_partials/_patrons' %}
+        </div>
+    </main>
+    {% include '_partials/_footer.twig' %}
+</body>
+
+</html>

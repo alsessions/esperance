@@ -1,0 +1,15 @@
+defaultPlacement: end
+enableVersioning: true
+handle: books
+name: Books
+propagationMethod: all
+siteSettings:
+  5667283f-37d8-4356-b040-3a9ce12ff30d: # Esperance Historical Museum
+    enabledByDefault: true
+    hasUrls: true
+    template: books/entry.twig
+    uriFormat: 'books/{slug}'
+structure:
+  maxLevels: null
+  uid: e6402ecf-52f6-4b6b-838b-374a8151c0f3
+type: structure

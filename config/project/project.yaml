@@ -1,0 +1,661 @@
+dateModified: 1739997174
+elementSources:
+  craft\elements\Category:
+    -
+      defaultSort:
+        - title
+        - asc
+      disabled: false
+      key: 'group:6418051f-b4b9-478a-92cd-fafbe3b180df' # Type
+      tableAttributes:
+        - link
+        - 'field:4056916d-30fa-4020-b9af-2694d0825a9d' # Description
+      type: native
+  craft\elements\Entry:
+    -
+      disabled: false
+      key: '*'
+      tableAttributes:
+        - section
+        - postDate
+        - expiryDate
+        - link
+      type: native
+    -
+      heading: Pages
+      type: heading
+    -
+      key: 'single:5d3bcb0f-894a-46d7-8eab-b51b7c00e500' # Front Page
+      type: native
+    -
+      key: 'single:4cec4262-95c2-4798-a5a8-739374bf5531' # About
+      type: native
+    -
+      key: 'single:704b1aec-095b-4188-a865-c287388005dd' # Library
+      type: native
+    -
+      key: 'single:4da724b1-ff4f-4614-a973-75acef87f25f' # Esperance History
+      type: native
+    -
+      key: 'single:03582369-2556-4f42-a544-426dea594c7d' # News Index
+      type: native
+    -
+      key: 'single:0b3d7006-f110-425d-98b2-981c3e45001f' # Exhibits Index
+      type: native
+    -
+      key: 'single:cbdf303c-55be-4d17-ab7d-04bd2c91beb0' # Support
+      type: native
+    -
+      key: 'single:baadb744-2196-4454-85a2-4ba2cb44278f' # Contact
+      type: native
+    -
+      heading: Sections
+      type: heading
+    -
+      defaultSort:
+        - postDate
+        - desc
+      disabled: false
+      key: 'section:43dc2b5e-932f-4a83-8093-9bef14d0606b' # News
+      tableAttributes:
+        - postDate
+        - expiryDate
+        - link
+        - 'field:3f6a90eb-671c-4817-8ece-c01f834f7cc6' # Post Image
+      type: native
+    -
+      key: 'section:baf5d37b-9b38-4a57-acfb-05a449af3f15' # Exhibits
+      type: native
+    -
+      disabled: false
+      key: 'section:451937a7-2fa0-4f16-86c1-c73501f9d7d9' # Photos
+      tableAttributes:
+        - postDate
+        - expiryDate
+        - link
+      type: native
+    -
+      heading: ''
+      type: heading
+    -
+      heading: ''
+      type: heading
+    -
+      key: 'single:1581d0cd-fc5f-4e4e-a3eb-31a021bcd969' # Books Index
+      type: native
+    -
+      key: 'single:d2bc249a-926e-4717-9fda-960f2c1d5dea' # Donate
+      type: native
+    -
+      key: 'single:407bfcd3-d085-4b1f-884a-379fed434969' # Membership
+      type: native
+    -
+      key: 'single:677a7d48-e545-414a-b433-1f02e04d5218' # Store
+      type: native
+    -
+      key: 'section:07cb0799-81f3-42d9-9fb7-a65258d8f448' # Board Members
+      type: native
+    -
+      key: 'section:b24e5aba-18dc-4cb9-bf71-035e940001bd' # Books
+      type: native
+  verbb\formie\elements\Submission:
+    -
+      defaultSort:
+        - title
+        - asc
+      disabled: false
+      key: '*'
+      tableAttributes:
+        - form
+        - dateCreated
+        - dateUpdated
+      type: native
+    -
+      heading: Forms
+      type: heading
+    -
+      key: 'form:17997'
+      type: native
+    -
+      key: 'form:15899'
+      type: native
+    -
+      defaultSort:
+        - title
+        - asc
+      disabled: false
+      key: 'form:15898'
+      tableAttributes:
+        - title
+        - dateCreated
+        - 'field:5d7f64e3-ff4b-4b4b-b259-f678bb9a4227'
+        - 'field:63a47544-9829-4c04-bf4e-2f4568269bf7'
+      type: native
+email:
+  fromEmail: info@esperancemuseum.org
+  fromName: 'Esperance Historical Museum'
+  replyToEmail: info@esperancemuseum.org
+  template: null
+  transportSettings:
+    password: sc3nicRt20
+    username: info@esperancemuseum.org
+  transportType: craft\mail\transportadapters\Gmail
+fs:
+  images:
+    hasUrls: true
+    name: Images
+    settings:
+      path: /var/www/esperance/web/images
+    type: craft\fs\Local
+    url: //esperancemuseum.org/images
+  newsImages:
+    hasUrls: true
+    name: 'News Images'
+    settings:
+      path: /var/www/esperance/web/news-images
+    type: craft\fs\Local
+    url: //esperancemuseum.org/news-images
+  photos:
+    hasUrls: true
+    name: Photos
+    settings:
+      path: /var/www/esperance/web/pictures
+    type: craft\fs\Local
+    url: '@web/pictures'
+meta:
+  __names__:
+    0aa17034-c99d-4e4e-9795-1e10184b9e25: 'Optimized News Cover' # Optimized News Cover
+    0b3d7006-f110-425d-98b2-981c3e45001f: 'Exhibits Index' # Exhibits Index
+    0b37ef2a-70ba-42fa-9b4f-caa4424fcc39: 'CTA Title' # CTA Title
+    0c2509f8-2d7d-4907-95ea-0c376c75df50: Caption # Caption
+    0d967ad9-7e46-4156-a765-597a9136ca13: Subtitle # Subtitle
+    0fcc860e-0af0-4fc6-b0c1-7ea900d1b814: Description # Description
+    0fd3f1ea-1aa7-4a54-88a7-9d5055431e13: Photos # Photos
+    2f8248ae-57e7-4959-a9bb-606ed57cdc97: Books # Books
+    2fe5c43f-9fa8-4f90-b55a-4c717188d614: 'Intro Text' # Intro Text
+    3a0045b1-9233-416b-8f75-3d2be53341c5: SEO # SEO
+    3b3bb20a-513a-430e-a43f-3b739a8912b0: 'Accession #' # Accession #
+    03c86fa2-55ac-405b-930e-49511cd73de4: 'Featured Item' # Featured Item
+    3f6a90eb-671c-4817-8ece-c01f834f7cc6: 'Post Image' # Post Image
+    3fbc9f08-deb2-440f-969a-700c23ad2db9: About # About
+    4c38897e-e7b8-4222-8bb0-0872b8d9eb47: 'Hero Image' # Hero Image
+    4cec4262-95c2-4798-a5a8-739374bf5531: About # About
+    4da724b1-ff4f-4614-a973-75acef87f25f: 'Esperance History' # Esperance History
+    5b756bd7-c713-4d5a-aed9-a6c762f26979: Role # Role
+    5d3bcb0f-894a-46d7-8eab-b51b7c00e500: 'Front Page' # Front Page
+    5f2e3d8f-e174-40fe-8666-5c67a5b89cce: Image # Image
+    5f954e99-bf5d-444a-9fd3-0fd68c956860: Image # Image
+    6a4f4a21-a30e-4257-b1e7-8162d57d2529: Date # Date
+    07cb0799-81f3-42d9-9fb7-a65258d8f448: 'Board Members' # Board Members
+    7d88abdd-6764-4ded-9eeb-f715e7c5851e: 'Cover Image' # Cover Image
+    7dc8b665-f888-454d-8437-c1c36d369a64: 'Image Left' # Image Left
+    7f4e420c-0072-4e38-80a0-2bc2e60d73bb: Contact # Contact
+    8fbf31c6-25ba-48e7-b1f9-213bbf63b690: Store # Store
+    9b737631-86fd-432f-ac74-ddc5a152f5de: 'Featured Image' # Featured Image
+    9fc5049f-5ce2-435c-9c5d-e55fbcf81e19: 'Public Schema' # Public Schema
+    21fa595a-59c9-4716-b8d3-7063dac8e537: 'Newsletter Issues' # Newsletter Issues
+    24a4eed0-28d2-4bd5-a239-557056a6c0f7: 'Newsletter File' # Newsletter File
+    43dc2b5e-932f-4a83-8093-9bef14d0606b: News # News
+    45ce9725-cb0c-426a-8289-636123e75090: Title # Title
+    51eb2b77-8f9d-4c2f-8a8c-16eca4d439f7: 'Front Page' # Front Page
+    55b6d5b2-3752-4033-b1aa-cebfa15844fc: 'News Index' # News Index
+    61b81395-00ec-4f3b-893a-8b2cde1f2d3d: Text # Text
+    082a547a-eb74-4c7c-9ce8-97b9845d4439: Description # Description
+    180f6aa7-1025-4b4f-88f4-f66ab96436f5: 'Front Page Hero' # Front Page Hero
+    209ad8ed-63e6-48ee-8dcd-8bb76d48a11e: 'Formatted text' # Formatted text
+    212d642a-9928-4c9c-b243-c606eba53a57: '500 Wide' # 500 Wide
+    268ae8b1-f79a-460c-bf91-c4b2b90de68c: 'Start Date' # Start Date
+    272abed2-968b-4723-a288-f10364c8ff55: News # News
+    276fae0b-a1da-494a-96f0-2c243a8dd94b: 'Optimized Square' # Optimized Square
+    407bfcd3-d085-4b1f-884a-379fed434969: Membership # Membership
+    677a7d48-e545-414a-b433-1f02e04d5218: Store # Store
+    704b1aec-095b-4188-a865-c287388005dd: Library # Library
+    747e2f9c-a411-4018-9b07-fb2ecfc14d1a: '400 high' # 400 high
+    00763a73-63f3-493e-91fb-6e234dfcea3d: 'End Date' # End Date
+    785b2198-3afa-4f3f-b947-668ed152a183: Caption # Caption
+    1230f096-4949-4aa7-ae8c-c9b30150e900: 'Newsletter Index' # Newsletter Index
+    1581d0cd-fc5f-4e4e-a3eb-31a021bcd969: 'Books Index' # Books Index
+    3373b542-091c-4eaf-babc-9d92a8b136c4: Text # Text
+    3427a436-20ab-4a7c-9710-04ac2d5c00a6: Default # Default
+    6614c737-aa68-42a1-9ec5-e9f270a6ce4d: Default # Default
+    7201d093-9c54-49e4-bd3b-a4c0c8f312ab: Default # Default
+    9357eb28-2a22-492e-b3de-bb52da924c4e: City # City
+    17790c7c-b82b-4627-8987-9ca3ef979f8e: 'CTA Link' # CTA Link
+    20659b38-c9e7-4a74-bd63-5ff9dacedf92: Photos # Photos
+    179918f7-943f-4046-a784-fbf529f91b38: Library # Library
+    250107a8-b540-477c-a181-30873966eb94: Featured # Featured
+    451937a7-2fa0-4f16-86c1-c73501f9d7d9: Photos # Photos
+    03582369-2556-4f42-a544-426dea594c7d: 'News Index' # News Index
+    4056916d-30fa-4020-b9af-2694d0825a9d: Description # Description
+    5667283f-37d8-4356-b040-3a9ce12ff30d: 'Esperance Historical Museum' # Esperance Historical Museum
+    6418051f-b4b9-478a-92cd-fafbe3b180df: Type # Type
+    9623268d-f754-48f2-beb9-68c3a79a9cf9: PayPal # PayPal
+    29967758-61f8-457b-b2cd-6f82cac8820f: '640 Wide' # 640 Wide
+    66539385-6c72-4d78-a0fc-a965aedc380e: 'Item Type' # Item Type
+    79870395-1b02-475c-a077-89f57505fa69: 'Featured Item' # Featured Item
+    a469f424-e319-400f-baca-d767dfe5eae3: Publisher # Publisher
+    a2458d7e-018e-4d08-970d-ff0596268507: 'Photo Optimized' # Photo Optimized
+    aee9fd99-7535-4cc1-a3fb-24d20d2a3852: 'News Images' # News Images
+    b5e2f021-7a67-4ad3-89b2-c1158786081d: 'Blog Post' # Blog Post
+    b24e5aba-18dc-4cb9-bf71-035e940001bd: Books # Books
+    b51b1096-21b9-456a-a101-8de926cc6525: 'Centered Image' # Centered Image
+    b3341421-4678-489f-b2b3-b74418c3d991: Default # Default
+    baadb744-2196-4454-85a2-4ba2cb44278f: Contact # Contact
+    bac0d3c5-c7eb-4e25-915d-c1d97da09b03: Text # Text
+    baf5d37b-9b38-4a57-acfb-05a449af3f15: Exhibits # Exhibits
+    bd46d482-30f1-47b7-8570-87118dd234e5: Default # Default
+    be49da65-20ec-4afc-a639-0712e9603fe4: 'Storage Location' # Storage Location
+    bf4fa5be-beb1-44e1-9920-4c1c7fc017e0: 'Optimized Landscape' # Optimized Landscape
+    bfe94fef-4424-4d78-b059-5f64bdeecc01: Images # Images
+    c3ad60fa-19e2-4ed0-8e3f-2e173bef190f: Image # Image
+    c2029411-4d7b-4594-aa8e-b6bcbbf70af1: Donate # Donate
+    cbdf303c-55be-4d17-ab7d-04bd2c91beb0: Support # Support
+    cd418604-ef74-49ca-9305-6d39da27140b: Author # Author
+    cf74b3ea-7b9a-4c0f-8d56-6ee9eba748e4: 'News Image Optimized' # News Image Optimized
+    d2bc249a-926e-4717-9fda-960f2c1d5dea: Donate # Donate
+    d2eb18a9-ad0f-425d-bc08-979824a2b91d: 'Esperance History' # Esperance History
+    d7fe58cc-bb7f-4667-ba16-25792ef8cbd3: 'Contact Form' # Contact Form
+    daf14386-595d-486f-af5f-ea8c2b0f1344: Membership # Membership
+    dba2cec3-c4ee-4cf4-9687-3b5015ec67f5: 'ISBN Number' # ISBN Number
+    e1f14656-b837-40fb-b976-ec4d12a3addd: Hero # Hero
+    e2a9909a-6f36-4a9a-ab54-603935a23789: 'Books Index' # Books Index
+    e51b60d8-c870-458b-88b3-8ae2d8c9f669: 'Exhibits Index' # Exhibits Index
+    e75b544d-bc7f-402a-9f8d-371bf5cba540: Default # Default
+    ec86cbbd-ed49-48dc-b878-b1037106f0bd: 'Call Number' # Call Number
+    eea691c2-e601-4811-b56d-e9e249e6dd1b: Text # Text
+    eee83a3c-2e6e-4629-883b-411aab711040: New # New
+    ef049fa2-931e-4e6b-924b-9a9a8494c2f9: Simple # Simple
+    f39812de-8959-4182-ab34-2631b2ce0216: Support # Support
+    f64689b9-8bca-415d-8d4d-2c18e0697972: 'Site Images' # Site Images
+    fafb9916-a445-47ea-9ed2-f6831ba8fca9: 'Esperance Historical Museum' # Esperance Historical Museum
+    fc60fa7d-ed36-45c2-9c49-d8ef1d0082d4: Common # Common
+    fdb59e46-2eff-43ee-be25-1f5805015a3d: '500 Square' # 500 Square
+    fe9f7b8e-fe83-4ea3-8d90-9ee27e9d8988: Default # Default
+    ff63d69e-8aac-4f7f-b5f0-a4f5dc28462f: 'Newsletter Index' # Newsletter Index
+plugins:
+  ckeditor:
+    edition: standard
+    enabled: true
+    schemaVersion: 3.0.0.0
+  contact-form:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+    settings:
+      allowAttachments: ''
+      allowedMessageFields: null
+      prependSender: 'On behalf of'
+      prependSubject: 'New message from Esperance Historical Museum'
+      successFlashMessage: 'Your message has been sent.'
+      toEmail: fultonchain@gmail.com
+  cp-clearcache:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  cp-field-inspect:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  expanded-singles:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  feed-me:
+    edition: standard
+    enabled: true
+    schemaVersion: 5.1.1
+  formie:
+    edition: standard
+    enabled: true
+    licenseKey: POLUPTA3LMCTLDPCVSA573S8
+    schemaVersion: 2.0.19
+    settings:
+      ajaxTimeout: 10
+      alertEmails: null
+      captchas:
+        __assoc__:
+          -
+            - recaptcha
+            -
+              __assoc__:
+                -
+                  - type
+                  - verbb\formie\integrations\captchas\Recaptcha
+                -
+                  - enabled
+                  - '1'
+                -
+                  - saveSpam
+                  - true
+                -
+                  - settings
+                  -
+                    __assoc__:
+                      0:
+                        - handle
+                        - recaptcha
+                      1:
+                        - secretKey
+                        - 6LdcJxQpAAAAANLoUQvpDIcKSx2jw3LjC3Q02mpk
+                      2:
+                        - siteKey
+                        - 6LdcJxQpAAAAAEG5iL5WD6zBvExuyjnOVFlgRk4c
+                      3:
+                        - type
+                        - v3
+                      4:
+                        - size
+                        - normal
+                      5:
+                        - theme
+                        - light
+                      6:
+                        - badge
+                        - bottomright
+                      7:
+                        - language
+                        - en
+                      8:
+                        - minScore
+                        - 0.5
+                      10:
+                        - scriptLoadingMethod
+                        - asyncDefer
+          -
+            - hcaptcha
+            -
+              __assoc__:
+                -
+                  - type
+                  - verbb\formie\integrations\captchas\Hcaptcha
+                -
+                  - enabled
+                  - '0'
+                -
+                  - saveSpam
+                  - true
+                -
+                  - settings
+                  -
+                    __assoc__:
+                      -
+                        - handle
+                        - hcaptcha
+                      -
+                        - secretKey
+                        - '0xD1607085CBd191CD620B306333A96f003B63388e'
+                      -
+                        - siteKey
+                        - e592f469-0426-401e-bc4c-3394b822f5fd
+                      -
+                        - size
+                        - normal
+                      -
+                        - theme
+                        - light
+                      -
+                        - language
+                        - en
+                      -
+                        - minScore
+                        - 0.5
+                      -
+                        - scriptLoadingMethod
+                        - asyncDefer
+          -
+            - duplicate
+            -
+              __assoc__:
+                -
+                  - type
+                  - verbb\formie\integrations\captchas\Duplicate
+                -
+                  - enabled
+                  - '1'
+                -
+                  - saveSpam
+                  - true
+                -
+                  - settings
+                  -
+                    __assoc__:
+                      -
+                        - handle
+                        - duplicate
+          -
+            - honeypot
+            -
+              __assoc__:
+                -
+                  - type
+                  - verbb\formie\integrations\captchas\Honeypot
+                -
+                  - enabled
+                  - '1'
+                -
+                  - saveSpam
+                  - true
+                -
+                  - settings
+                  -
+                    __assoc__:
+                      -
+                        - handle
+                        - honeypot
+          -
+            - javascript
+            -
+              __assoc__:
+                -
+                  - type
+                  - verbb\formie\integrations\captchas\Javascript
+                -
+                  - enabled
+                  - '1'
+                -
+                  - saveSpam
+                  - true
+                -
+                  - settings
+                  -
+                    __assoc__:
+                      -
+                        - handle
+                        - javascript
+          -
+            - friendlyCaptcha
+            -
+              __assoc__:
+                -
+                  - type
+                  - verbb\formie\integrations\captchas\FriendlyCaptcha
+                -
+                  - enabled
+                  - '0'
+                -
+                  - saveSpam
+                  - true
+                -
+                  - settings
+                  -
+                    __assoc__:
+                      0:
+                        - handle
+                        - friendlyCaptcha
+                      3:
+                        - language
+                        - en
+          -
+            - turnstile
+            -
+              __assoc__:
+                -
+                  - type
+                  - verbb\formie\integrations\captchas\Turnstile
+                -
+                  - enabled
+                  - '0'
+                -
+                  - saveSpam
+                  - true
+                -
+                  - settings
+                  -
+                    __assoc__:
+                      0:
+                        - handle
+                        - turnstile
+                      3:
+                        - scriptLoadingMethod
+                        - asyncDefer
+      defaultDateDisplayType: calendar
+      defaultDateTime: null
+      defaultDateValueOption: ''
+      defaultEmailTemplate: ''
+      defaultFileUploadVolume: ''
+      defaultFormTemplate: ''
+      defaultInstructionsPosition: verbb\formie\positions\AboveInput
+      defaultLabelPosition: verbb\formie\positions\AboveInput
+      defaultPage: forms
+      emptyValuePlaceholder: 'No response.'
+      enableBackSubmission: true
+      enableCsrfValidationForGuests: true
+      enableLargeFieldStorage: false
+      enableUnloadWarning: true
+      includeDraftElementUsage: false
+      includeRevisionElementUsage: false
+      maxIncompleteSubmissionAge: 30
+      maxSentNotificationsAge: 30
+      pdfPaperOrientation: portrait
+      pdfPaperSize: letter
+      pluginName: Formie
+      queuePriority: null
+      saveSpam: true
+      sendEmailAlerts: false
+      sentNotifications: true
+      spamBehaviour: showSuccess
+      spamBehaviourMessage: ''
+      spamEmailNotifications: false
+      spamKeywords: ''
+      spamLimit: 500
+      useQueueForIntegrations: true
+      useQueueForNotifications: true
+      validateCustomTemplates: true
+  image-optimize:
+    edition: standard
+    enabled: true
+    licenseKey: 6NZSJPYB974H42WNX1NYHJIQ
+    schemaVersion: 1.0.0
+    settings:
+      allowUpScaledImageVariants: true
+      assetVolumeSubFolders: true
+      autoSharpenScaledImages: true
+      capSilhouetteSvgSize: true
+      createColorPalette: true
+      createPlaceholderSilhouettes: false
+      imageTransformTypeSettings:
+        __assoc__:
+          -
+            - nystudio107\imageoptimizeimgix\imagetransforms\ImgixImageTransform
+            -
+              __assoc__:
+                -
+                  - domain
+                  - ''
+                -
+                  - apiKey
+                  - ''
+                -
+                  - securityToken
+                  - ''
+                -
+                  - unsharpMask
+                  - '20'
+          -
+            - nystudio107\imageoptimizesharp\imagetransforms\SharpImageTransform
+            -
+              __assoc__:
+                -
+                  - baseUrl
+                  - ''
+          -
+            - nystudio107\imageoptimizethumbor\imagetransforms\ThumborImageTransform
+            -
+              __assoc__:
+                -
+                  - baseUrl
+                  - ''
+                -
+                  - securityKey
+                  - ''
+      lowerQualityRetinaImageVariants: true
+      sharpenScaledImagePercentage: 25
+      transformClass: nystudio107\imageoptimize\imagetransforms\CraftImageTransform
+  quick-field:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  seo:
+    edition: standard
+    enabled: true
+    schemaVersion: 3.2.0
+    settings:
+      description: 'The Esperance Historical Society is a non-profit organization dedicated to preserving the history of the Village of Esperance, New York.'
+      facebookAppId: ''
+      metaTemplate: ''
+      removeAlternateUrls: ''
+      robots:
+        - ''
+        - ''
+        - ''
+        - ''
+        - ''
+        - ''
+      robotsTxt: "{# Sitemap URL #}\r\nSitemap: {{ url(seo.sitemapName ~ '.xml') }}\r\n\r\n{# Disallows #}\r\n{% if craft.app.config.env != 'production' %}\r\n\r\n{# Disallow access to everything when NOT in production #}\r\nUser-agent: *\r\nDisallow: /\r\n\r\n{% else %}\r\n\r\n{# Disallow access to cpresources/ when live #}\r\nUser-agent: *\r\nDisallow: /cpresources/\r\n\r\n{% endif %}"
+      sitemapLimit: '1000'
+      sitemapName: sitemap
+      socialImage:
+        - '19'
+      title:
+        -
+          __assoc__:
+            -
+              - key
+              - '1'
+            -
+              - locked
+              - '0'
+            -
+              - template
+              - '{title}'
+        -
+          __assoc__:
+            -
+              - key
+              - '2'
+            -
+              - locked
+              - '1'
+            -
+              - template
+              - ' - {{ siteName }}'
+      titleSuffix: null
+      twitterHandle: ''
+  wordsmith:
+    edition: standard
+    enabled: true
+    schemaVersion: 0.0.0.0
+system:
+  edition: solo
+  live: true
+  name: 'The Esperance Historical Society & Museum'
+  retryDuration: null
+  schemaVersion: 4.5.3.0
+  timeZone: America/New_York
+users:
+  allowPublicRegistration: false
+  deactivateByDefault: false
+  defaultGroup: null
+  photoSubpath: null
+  photoVolumeUid: null
+  requireEmailVerification: true

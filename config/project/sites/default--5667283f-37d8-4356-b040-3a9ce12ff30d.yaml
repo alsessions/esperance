@@ -1,0 +1,9 @@
+baseUrl: $PRIMARY_SITE_URL
+enabled: true
+handle: default
+hasUrls: true
+language: en-US
+name: 'Esperance Historical Museum'
+primary: true
+siteGroup: fafb9916-a445-47ea-9ed2-f6831ba8fca9 # Esperance Historical Museum
+sortOrder: 1

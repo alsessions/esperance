@@ -1,0 +1,19 @@
+columnSuffix: imljfxkb
+contentColumnType: text
+fieldGroup: 2f8248ae-57e7-4959-a9bb-606ed57cdc97 # Books
+handle: publisher
+instructions: null
+name: Publisher
+searchable: true
+settings:
+  byteLimit: null
+  charLimit: null
+  code: false
+  columnType: null
+  initialRows: 1
+  multiline: true
+  placeholder: null
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

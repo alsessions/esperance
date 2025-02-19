@@ -1,0 +1,15 @@
+defaultPlacement: end
+enableVersioning: true
+handle: newsletterIssues
+name: 'Newsletter Issues'
+propagationMethod: all
+siteSettings:
+  5667283f-37d8-4356-b040-3a9ce12ff30d: # Esperance Historical Museum
+    enabledByDefault: true
+    hasUrls: true
+    template: newsletter/_entry
+    uriFormat: 'newsletter/{slug}'
+structure:
+  maxLevels: null
+  uid: c1eb7742-ca4e-4a7a-9cc4-d311ddd91400
+type: structure

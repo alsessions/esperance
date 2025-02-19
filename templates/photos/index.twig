@@ -1,0 +1,55 @@
+{% include '_partials/_head.twig' %}    
+
+<body class="bg-zinc-50">
+    {% include '_partials/_nav2.twig' %}
+    <div class="my-20 max-w-6xl mx-auto px-4 prose prose-lg">
+        <div class="max-w-4xl">
+           <h1 class="text-3xl md:text-5xl  text-yellow-900">Photos of Esperance, New York</h1>
+           
+           
+                    
+            </div>
+           </div>
+    <main class="max-w-6xl mx-auto grid md:grid-cols-3 lg:grid-cols-4 gap-6 px-4 ">
+        {# Create an entry query with the 'section' and 'limit' parameters #}
+        {% set myEntryQuery = craft.entries()
+          .section('photos')
+          .level('1')
+          .limit(20) %}
+
+        {# Fetch the entries #}
+        {% set entries = myEntryQuery.all() %}
+
+        {# Display the entries #}
+        {% for entry in entries %}
+        <div class="mb-4 md:mb-28">
+            <h2 class="mb-4 text-xl md:text-xl   text-yellow-800"><a
+                href="{{ entry.url() }}">{{ entry.title | widont }}</a></h2>
+      
+            {% set optimizedImages = entry.photos.one().photoOptimized %}
+            <a href="{{ entry.url() }}">
+            <picture class="not-prose">
+                <source data-srcset="{{ optimizedImages.srcsetWebP() }}" 
+                        data-sizes="100vw"
+                        type="image/webp" />
+                        <img class="lazyload w-full h-auto"
+                     src="{{ optimizedImages.placeholderImage() }}"
+                     data-srcset="{{ optimizedImages.srcset() }}"
+                     data-sizes="100vw" />
+             </picture>
+            </a>
+                <div class="mt-2 pb-4 text-gray-800 italic">
+                    {{ entry.text }}
+            
+                </div>
+                
+     
+        </div>
+        {% endfor %}
+
+
+    </main>
+    {% include '_partials/_footer.twig' %}
+</body>
+
+</html>

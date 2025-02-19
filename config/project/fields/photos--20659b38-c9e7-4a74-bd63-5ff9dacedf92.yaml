@@ -1,0 +1,36 @@
+columnSuffix: null
+contentColumnType: string
+fieldGroup: bfe94fef-4424-4d78-b059-5f64bdeecc01 # Images
+handle: photos
+instructions: null
+name: Photos
+searchable: false
+settings:
+  allowSelfRelations: false
+  allowSubfolders: false
+  allowUploads: true
+  allowedKinds: null
+  branchLimit: null
+  defaultUploadLocationSource: 'volume:0fd3f1ea-1aa7-4a54-88a7-9d5055431e13' # Photos
+  defaultUploadLocationSubpath: null
+  localizeRelations: false
+  maintainHierarchy: false
+  maxRelations: null
+  minRelations: null
+  previewMode: full
+  restrictFiles: false
+  restrictLocation: false
+  restrictedDefaultUploadSubpath: null
+  restrictedLocationSource: 'volume:f64689b9-8bca-415d-8d4d-2c18e0697972' # Site Images
+  restrictedLocationSubpath: null
+  selectionLabel: null
+  showSiteMenu: true
+  showUnpermittedFiles: false
+  showUnpermittedVolumes: false
+  sources: '*'
+  targetSiteId: null
+  validateRelatedElements: false
+  viewMode: list
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Assets

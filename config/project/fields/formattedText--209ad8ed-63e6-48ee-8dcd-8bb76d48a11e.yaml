@@ -1,0 +1,23 @@
+columnSuffix: lxodftid
+contentColumnType: text
+fieldGroup: fc60fa7d-ed36-45c2-9c49-d8ef1d0082d4 # Common
+handle: formattedText
+instructions: null
+name: 'Formatted text'
+searchable: false
+settings:
+  availableTransforms: '*'
+  availableVolumes: '*'
+  ckeConfig: 7201d093-9c54-49e4-bd3b-a4c0c8f312ab # Default
+  columnType: text
+  defaultTransform: null
+  enableSourceEditingForNonAdmins: false
+  purifierConfig: null
+  purifyHtml: true
+  showUnpermittedFiles: false
+  showUnpermittedVolumes: false
+  showWordCount: false
+  wordLimit: null
+translationKeyFormat: null
+translationMethod: none
+type: craft\ckeditor\Field

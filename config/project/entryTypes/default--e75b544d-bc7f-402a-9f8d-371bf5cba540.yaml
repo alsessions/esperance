@@ -1,0 +1,71 @@
+fieldLayouts:
+  9afc44df-ea2e-4d62-9aa5-d80fbff4a41e:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            inputType: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 797f1b80-7a35-430b-8971-39928813c5c4
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 7d88abdd-6764-4ded-9eeb-f715e7c5851e # Cover Image
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 49ff7468-5a01-4dc7-9f4c-f368b4d2fd5e
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 24a4eed0-28d2-4bd5-a239-557056a6c0f7 # Newsletter File
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: c76a8e56-59f6-4960-bc64-68346d423012
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: b9247dc8-4d43-42a4-87a8-23febbb542a1
+        userCondition: null
+handle: default
+hasTitleField: true
+name: Default
+section: 21fa595a-59c9-4716-b8d3-7063dac8e537 # Newsletter Issues
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+sortOrder: 1
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

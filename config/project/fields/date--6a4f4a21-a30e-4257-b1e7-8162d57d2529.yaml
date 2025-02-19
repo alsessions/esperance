@@ -1,0 +1,19 @@
+columnSuffix: xyvjlatj
+contentColumnType: text
+fieldGroup: 2f8248ae-57e7-4959-a9bb-606ed57cdc97 # Books
+handle: date
+instructions: null
+name: Date
+searchable: true
+settings:
+  byteLimit: null
+  charLimit: null
+  code: false
+  columnType: null
+  initialRows: 4
+  multiline: false
+  placeholder: null
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

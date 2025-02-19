@@ -1,0 +1,18 @@
+{% include '_partials/_head.twig' %}
+
+<body class="bg-zinc-50">
+{% include '_partials/_nav2.twig' %}
+<main class="max-w-4xl mx-auto py-20  px-4 min-h-screen">
+
+	<article>
+		<h1 class="text-3xl md:text-5xl text-center text-yellow-900">{{ entry.title | widont }}</h1>
+
+
+		<div class="prose prose-lg prose-headings:font-normal max-w-none mt-10">
+			{{ entry.formattedText }}
+		</div>
+	</article>
+
+
+</main>
+{% include '_partials/_footer.twig' %}

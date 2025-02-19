@@ -1,0 +1,56 @@
+fieldLayouts:
+  6a251a67-d28a-4a02-8b95-489c37471e3b:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            inputType: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\assets\AssetTitleField
+            uid: d723dddf-4bb9-473a-ade5-2dc31240d1b5
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: cf74b3ea-7b9a-4c0f-8d56-6ee9eba748e4 # News Image Optimized
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 09846bb2-d1a3-4184-ac95-0c9f477e4fbc
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 2c73d210-96b3-4536-b49c-09b007c55e2a
+        userCondition: null
+fs: newsImages
+handle: newsImages
+name: 'News Images'
+sortOrder: 2
+titleTranslationKeyFormat: null
+titleTranslationMethod: site
+transformFs: ''
+transformSubpath: ''

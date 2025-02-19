@@ -1,0 +1,59 @@
+fieldLayouts:
+  b8c857c0-6d3b-476d-8eda-260cdbe592eb:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            inputType: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: b1e4fb32-8643-461c-b7a4-e00b6adb0738
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 209ad8ed-63e6-48ee-8dcd-8bb76d48a11e # Formatted text
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 53e77fcd-7af9-4011-9de2-6aa844aa3e1a
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: e9829043-b853-4336-bbd5-a4d7eb5f63cd
+        userCondition: null
+handle: history
+hasTitleField: true
+name: 'Esperance History'
+section: 4da724b1-ff4f-4614-a973-75acef87f25f # Esperance History
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+sortOrder: 1
+titleFormat: '{section.name|raw}'
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

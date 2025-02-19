@@ -1,0 +1,127 @@
+field: 180f6aa7-1025-4b4f-88f4-f66ab96436f5 # Front Page Hero
+fieldLayouts:
+  cd674b6a-fb52-43a2-9d63-998e84404bed:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 45ce9725-cb0c-426a-8289-636123e75090 # Title
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: e5c897b5-0a38-4910-9b59-1592c8539a4c
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 5f2e3d8f-e174-40fe-8666-5c67a5b89cce # Image
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 67eafc2a-62e2-446d-b3b9-014671b0b8bf
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 0fcc860e-0af0-4fc6-b0c1-7ea900d1b814 # Description
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 8c0e2fd6-6081-4a98-8e3e-c2161ec53a52
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: e7062549-c8af-4144-86d2-fa168bd75c24
+        userCondition: null
+fields:
+  0fcc860e-0af0-4fc6-b0c1-7ea900d1b814: # Description
+    columnSuffix: wwchavkp
+    contentColumnType: text
+    fieldGroup: null
+    handle: description
+    instructions: null
+    name: Description
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: true
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  5f2e3d8f-e174-40fe-8666-5c67a5b89cce: # Image
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: image
+    instructions: null
+    name: Image
+    searchable: false
+    settings:
+      allowSelfRelations: false
+      allowSubfolders: false
+      allowUploads: true
+      allowedKinds: null
+      branchLimit: null
+      defaultUploadLocationSource: 'volume:f64689b9-8bca-415d-8d4d-2c18e0697972' # Site Images
+      defaultUploadLocationSubpath: null
+      localizeRelations: false
+      maintainHierarchy: false
+      maxRelations: null
+      minRelations: null
+      previewMode: full
+      restrictFiles: false
+      restrictLocation: false
+      restrictedDefaultUploadSubpath: null
+      restrictedLocationSource: 'volume:f64689b9-8bca-415d-8d4d-2c18e0697972' # Site Images
+      restrictedLocationSubpath: null
+      selectionLabel: null
+      showSiteMenu: true
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      sources: '*'
+      targetSiteId: null
+      validateRelatedElements: false
+      viewMode: list
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Assets
+  45ce9725-cb0c-426a-8289-636123e75090: # Title
+    columnSuffix: wtktifuy
+    contentColumnType: text
+    fieldGroup: null
+    handle: heroTitle
+    instructions: null
+    name: Title
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: false
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+handle: heroImage
+name: 'Hero Image'
+sortOrder: 1

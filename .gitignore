@@ -1,0 +1,33 @@
+# Craft CMS
+/.env
+/.idea
+/vendor
+.DS_Store
+
+# Craft Runtime & Storage
+/storage/*
+!/storage/.gitkeep
+
+# Craft Runtime Specific
+/storage/runtime/*
+/storage/logs/*
+/storage/config-backups/*
+/storage/composer-backups/*
+
+# Craft Debug & Cache
+/web/cpresources/*
+
+# Asset Volumes
+/web/pictures/*
+/web/images/*
+/web/news-images/*
+
+# Build tools
+/node_modules
+npm-debug.log
+yarn-error.log
+
+# Misc files
+*.cache
+*.log
+.php_cs.cache

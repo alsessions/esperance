@@ -1,0 +1,23 @@
+columnSuffix: null
+contentColumnType: string
+fieldGroup: 2f8248ae-57e7-4959-a9bb-606ed57cdc97 # Books
+handle: itemType
+instructions: null
+name: 'Item Type'
+searchable: false
+settings:
+  allowSelfRelations: false
+  branchLimit: null
+  localizeRelations: false
+  maintainHierarchy: false
+  maxRelations: null
+  minRelations: null
+  selectionLabel: 'Add an item type'
+  showSiteMenu: false
+  source: 'group:6418051f-b4b9-478a-92cd-fafbe3b180df' # Type
+  targetSiteId: null
+  validateRelatedElements: false
+  viewMode: null
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Categories

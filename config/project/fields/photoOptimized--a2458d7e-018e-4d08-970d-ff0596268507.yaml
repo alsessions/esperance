@@ -1,0 +1,68 @@
+columnSuffix: wilootgs
+contentColumnType: text
+fieldGroup: bfe94fef-4424-4d78-b059-5f64bdeecc01 # Images
+handle: photoOptimized
+instructions: null
+name: 'Photo Optimized'
+searchable: false
+settings:
+  displayDominantColorPalette: false
+  displayLazyLoadPlaceholderImages: false
+  displayOptimizedImageVariants: true
+  fieldVolumeSettings:
+    __assoc__:
+      -
+        - photos
+        - '*'
+  variants:
+    -
+      __assoc__:
+        -
+          - width
+          - '768'
+        -
+          - useAspectRatio
+          - ''
+        -
+          - aspectRatioX
+          - '1'
+        -
+          - aspectRatioY
+          - '1'
+        -
+          - retinaSizes
+          -
+            - '1'
+        -
+          - quality
+          - '82'
+        -
+          - format
+          - jpg
+    -
+      __assoc__:
+        -
+          - width
+          - '480'
+        -
+          - useAspectRatio
+          - ''
+        -
+          - aspectRatioX
+          - '1'
+        -
+          - aspectRatioY
+          - '1'
+        -
+          - retinaSizes
+          -
+            - '1'
+        -
+          - quality
+          - '82'
+        -
+          - format
+          - jpg
+translationKeyFormat: null
+translationMethod: none
+type: nystudio107\imageoptimize\fields\OptimizedImages

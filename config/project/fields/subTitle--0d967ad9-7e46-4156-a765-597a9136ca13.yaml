@@ -1,0 +1,19 @@
+columnSuffix: zyxbhnha
+contentColumnType: text
+fieldGroup: fc60fa7d-ed36-45c2-9c49-d8ef1d0082d4 # Common
+handle: subTitle
+instructions: null
+name: Subtitle
+searchable: false
+settings:
+  byteLimit: null
+  charLimit: null
+  code: false
+  columnType: null
+  initialRows: 2
+  multiline: true
+  placeholder: null
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

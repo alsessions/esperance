@@ -1,0 +1,112 @@
+{% include '_partials/_head.twig' %}
+
+<body class="bg-zinc-50">
+    {% include '_partials/_nav2.twig' %}
+    <main class="max-w-6xl mx-auto py-20 px-4 min-h-screen">
+        
+            <h1 class="text-3xl md:text-5xl text-yellow-900">{{ entry.title | widont }}</h1>
+            <h2 class="text-xl md:text-2xl text-yellow-800 mt-4">{{ entry.subTitle | widont }}</h2>
+
+            <div class="grid grid-cols-6 gap-4">
+            <div class="prose max-w-none col-span-4">
+                <p>The Chapel Library at the Esperance Historical Society is a unique collection of books, documents, and other media accumulated by members of the Society over many years.</p>
+                <p>The library includes special collections featuring local authors, Methodist History, Agricultural Newspapers, The Anti-Rent War, Civil War including much on the US Colored Troops, Business Directories, and gazetteers. In addition, the library has a large genealogical section featuring church records, cemetery records, family histories, and census records. The collection includes a large Schoharie County and NYS History section. One of the special collections is the Kniskern Family Papers, Johann Peter Kniskern was a Palatine immigrant whose name was given to Kniskern’s Dorf, a German farming community, the earliest European settlement in the Town. Featured among many rare documents and letters is the 1729 survey of Kniskern’s Dorf on display.</p>
+                <p>Visitors can watch a short video presentation that will acquaint the visitor with the history of the area and the creation of the Chapel Library.</p>
+            </div>
+
+            <div class="my-4 col-span-2">
+                <form action="{{ url('search/results-books') }}">
+                    <input type="search" name="q" aria-label="Search" placeholder="Search by Title or Author" class="py-1 px-2 rounded my-2">
+                    <button type="submit" class="border border-1 border-orange-800 bg-orange-900 text-white py-1 px-2 ml-2 rounded">Go</button>
+                </form>
+            </div>
+          </div>
+
+            <div class="my-10 mx-auto">
+                {# Create a category query with the 'group' parameter #}
+                {% set types = craft.categories().group('itemType').orderBy('title') %}
+                
+                {# Fetch the categories #}
+                {% set categories = types.all() %}
+                
+                {# Display the navigation #}
+                <ul class="grid grid-cols-2 lg:grid-cols-3 gap-x-1 text-sm">
+                    {% nav category in categories %}
+                        <li>
+                            <a href="{{ category.url }}" class="text-blue-500">{{ category.title }}</a> - {{ category.description }}
+                            {% ifchildren %}
+                                <ul>
+                                    {% children %}
+                                </ul>
+                            {% endifchildren %}
+                        </li>
+                    {% endnav %}
+                </ul>
+            </div>
+            <!-- Begin table listing -->
+
+        <div class="flex flex-col">
+            <div class="overflow-x-auto">
+                <div class="inline-block min-w-full">
+                    <div class="overflow-hidden">
+                        <table class="min-w-full">
+                            <thead class="border-b">
+                                <tr>
+                                    <th scope="col" class="text-base font-medium text-gray-900 px-6 py-4 text-left">Title</th>
+                                    <th scope="col" class="text-base font-medium text-gray-900 px-6 py-4 text-left">Author</th>
+                                    <th scope="col" class="text-base font-medium text-gray-900 px-6 py-4 text-left">Date</th>
+                                    <th scope="col" class="text-base font-medium text-gray-900 px-6 py-4 text-left">Type</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                {% paginate craft.entries.section('books').limit(50).orderBy('title asc') as pageInfo, pageEntries %}
+                                
+                                {% for entry in pageEntries %}
+                                    {% set categories = craft.categories().relatedTo(entry).all() %}
+                                    <tr class="border-b">
+                                        <td class="px-6 py-4 text-sm font-medium">
+                                            <a href="{{ entry.url() }}" class="text-blue-500">
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 inline-block mr-1 mb-1 text-blue-500" viewBox="0 0 20 20" fill="currentColor">
+                                                    <path d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z" />
+                                                    <path d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z" />
+                                                </svg>
+                                                {{ entry.title }}
+                                            </a>
+                                        </td>
+                                        <td class="text-sm text-gray-900 px-6 py-4">{{ entry.bookAuthor }}</td>
+                                        <td class="text-sm text-gray-900 px-6 py-4">{{ entry.date }}</td>
+                                        <td class="text-sm text-gray-900 px-6 py-4">
+                                            {% for category in categories %}
+                                                <a href="{{ category.url }}" class="text-blue-500">{{ category.title }}</a>
+                                            {% endfor %}
+                                        </td>
+                                    </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="flex items-center justify-center space-x-2 my-10">
+            <a href="{{ pageInfo.firstUrl }}" class="px-4 py-2 text-gray-700 bg-gray-200 rounded-md hover:bg-blue-400 hover:text-white">First</a>
+            {% if pageInfo.prevUrl %}
+                <a href="{{ pageInfo.prevUrl }}/#top" class="px-4 py-2 text-gray-700 bg-gray-200 rounded-md hover:bg-blue-400 hover:text-white">Previous</a>
+            {% endif %}
+            {% for page, url in pageInfo.getPrevUrls(5) %}
+                <a href="{{ url }}/#top" class="px-4 py-2 text-gray-700 bg-gray-200 rounded-md hover:bg-blue-400 hover:text-white">{{ page }}</a>
+            {% endfor %}
+            <span class="px-4 py-2 text-gray-700 bg-gray-200 rounded-md">{{ pageInfo.currentPage }}</span>
+            {% for page, url in pageInfo.getNextUrls(5) %}
+                <a href="{{ url }}/#top" class="px-4 py-2 text-gray-700 bg-gray-200 rounded-md hover:bg-blue-400 hover:text-white">{{ page }}</a>
+            {% endfor %}
+            {% if pageInfo.nextUrl %}
+                <a href="{{ pageInfo.nextUrl }}/#top" class="px-4 py-2 text-gray-700 bg-gray-200 rounded-md hover:bg-blue-400 hover:text-white">Next</a>
+            {% endif %}
+            <a href="{{ pageInfo.lastUrl }}/#top" class="px-4 py-2 text-gray-700 bg-gray-200 rounded-md hover:bg-blue-400 hover:text-white">Last</a>
+        </div>
+    </main>
+    {% include '_partials/_footer.twig' %}
+</body>

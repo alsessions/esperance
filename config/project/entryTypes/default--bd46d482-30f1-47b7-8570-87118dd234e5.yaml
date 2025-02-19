@@ -1,0 +1,59 @@
+fieldLayouts:
+  5aee2a89-6855-4dd6-963b-7a317265d63f:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            inputType: null
+            instructions: null
+            label: Name
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: dfbeafc9-92c9-406a-9c57-2d37ca542d96
+            userCondition: null
+            warning: null
+            width: 50
+          -
+            elementCondition: null
+            fieldUid: 5b756bd7-c713-4d5a-aed9-a6c762f26979 # Role
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 7ba02261-8785-4c34-b563-98deb488d462
+            userCondition: null
+            warning: null
+            width: 50
+        name: Content
+        uid: eb702199-3938-4cb4-87a7-43e7ec905185
+        userCondition: null
+handle: default
+hasTitleField: true
+name: Default
+section: 07cb0799-81f3-42d9-9fb7-a65258d8f448 # Board Members
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+sortOrder: 1
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

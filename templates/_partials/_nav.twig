@@ -1,0 +1,80 @@
+<div class="w-full text-lg nav-back">
+	<div class="flex flex-wrap mx-auto justify-between hidden md:flex pt-2 px-6 text-gray-300 uppercase text-sm tracking-wide">
+
+		<div>
+			<a href="tel://5188756854">(518) 875-6854</a>
+		</div>
+		<div>
+			123 Church Street, Esperance, NY 12066
+		</div>
+	
+	</div>
+
+	<div x-data="{ open: false }"
+		class="flex flex-col  px-4 mx-auto md:items-center md:justify-between md:flex-row md:px-4 lg:px-6 bg-transparent">
+
+		<div class=" py-6 flex flex-row items-center justify-between max-w-7xl">
+			<a href="/"
+				class="  text-2xl md:text-3xl  focus:outline-none focus:shadow-outline font-headings text-yellow-500 block font-light ">Esperance Historical Museum</a>
+					<!--
+				<a href="/"
+				class="  text-2xl md:text-4xl  focus:outline-none focus:shadow-outline font-medium font-headings text-white block">Esperance Historical Museum</a>
+				<a href="/"
+				class="  text-2xl md:text-4xl  focus:outline-none focus:shadow-outline font-medium font-headings text-orange-400 block">Esperance Historical Museum</a>
+				<a href="/"
+				class="  text-2xl md:text-4xl  focus:outline-none focus:shadow-outline  font-headings text-yellow-500 font-sans block">Esperance Historical Museum</a>
+					-->
+			<button name="menu"
+				class="md:hidden text-yellow-500  focus:outline-none focus:shadow-outline lazyload"
+				@click="open = !open"
+				name="Menu">
+				<svg fill="#eab308"
+					viewBox="0 0 20 20"
+					class="w-6 h-6 text-gray-100">
+					<path x-show="!open"
+						fill-rule="evenodd"
+						d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z"
+						clip-rule="evenodd"></path>
+					<path x-show="open"
+						fill-rule="evenodd"
+						d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+						clip-rule="evenodd"
+						style="display: none;"></path>
+				</svg>
+			</button>
+		</div>
+		<div>
+
+
+			<nav :class="{'flex': open, 'hidden': !open}"
+				class="flex-col flex-grow  md:pb-0 md:flex md:justify-end md:flex-row hidden">
+
+				<a class="px-2 py-2 mt-2   tracking-wider uppercase bg-transparent  md:mt-0 md:ml-4 text-yellow-400 hover:text-gray-400 text-lg "
+				href="/about">About
+				</a>
+
+
+				<a class="px-2 py-2 mt-2   tracking-wider uppercase bg-transparent  md:mt-0 md:ml-4 text-yellow-400 hover:text-gray-400 text-lg "
+					href="/news">News
+				</a>
+
+				<a class="px-2 py-2 mt-2   tracking-wider uppercase bg-transparent  md:mt-0 md:ml-4 text-yellow-400 hover:text-gray-400 text-lg "
+				href="/library">Library
+				</a>
+
+				<a class="px-2 py-2 mt-2   tracking-wider uppercase bg-transparent  md:mt-0 md:ml-4 text-yellow-400 hover:text-gray-400 text-lg "
+					href="/exhibits">Events &amp; Exhibits
+				</a>
+
+			
+
+
+				<a class="px-2 py-2 mt-2 mb-2   tracking-wider uppercase bg-transparent  md:mt-0 md:ml-4 text-yellow-400 hover:text-gray-400 text-lg "
+					href="/contact">Contact</a>
+
+					<p class=" block md:hidden  text-sm text-gray-100 py-2 px-2 leading-loose  tracking-wide"><a href="tel://5188756854" class=" hover:underline  hover:text-teal-700 ">(518) 875-6854</a><br><a href="mailto:example@example.com" class="hover:underline  hover:text-teal-700">example@example.com</a><br>123 Church Street, Esperance, NY 12066</p>
+			</nav>
+		</div>
+	</div>
+
+</div>

@@ -1,0 +1,10 @@
+enabled: '1'
+handle: paypal
+name: PayPal
+settings:
+  clientId: null
+  clientSecret: null
+  useSandbox: '1'
+sortOrder: 2
+tokenId: null
+type: verbb\formie\integrations\payments\PayPal

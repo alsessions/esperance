@@ -1,0 +1,16 @@
+columnSuffix: null
+contentColumnType: string
+fieldGroup: e1f14656-b837-40fb-b976-ec4d12a3addd # Hero
+handle: hero
+instructions: null
+name: 'Front Page Hero'
+searchable: false
+settings:
+  contentTable: '{{%matrixcontent_hero}}'
+  maxBlocks: null
+  minBlocks: null
+  propagationKeyFormat: null
+  propagationMethod: all
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Matrix

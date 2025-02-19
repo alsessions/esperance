@@ -1,0 +1,111 @@
+@tailwind base;
+
+h1,
+h2,
+h3 {
+    @apply text-yellow-900 font-serif font-normal;
+}
+
+
+
+html {
+    @apply font-sans;
+}
+
+.nav-back {
+    background: #302D2E;
+}
+
+/* Swiper follows */
+
+
+.swiper {
+width: 100%;
+
+}
+
+.swiper {
+@apply h-[480px] md:h-[640px];
+}
+
+
+.swiper-pagination-bullet {
+background-color: #fff !important;
+opacity: .9 !important;
+@apply h-4 w-4;
+
+}
+
+span.swiper-pagination-bullet.swiper-pagination-bullet-active {
+background-color: blue !important;
+
+}
+
+.swiper-button-new-last,
+.swiper-button-new-next {
+@apply text-white font-semibold text-2xl px-2 bg-gray-700 bg-opacity-50 mt-2;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+top: 100% !important;
+width: calc(var(--swiper-navigation-size)/ 44 * 27);
+height: var(--swiper-navigation-size);
+margin-top: calc(0px - (var(--swiper-navigation-size)/ 2));
+z-index: 10;
+cursor: pointer;
+display: flex;
+align-items: bottom;
+justify-content: center;
+color: #ddd !important;
+background-color: transparent;
+opacity: .4;
+padding: 5px !important;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+font-family: inherit;
+font-size: 16px;
+text-transform: none !important;
+letter-spacing: 0;
+text-transform: none;
+font-variant: initial;
+line-height: 1;
+padding: 10px;
+}
+
+.responsive-img {
+    width: 100%;
+    height: auto;
+}
+
+.scrollToTopBtn {
+    background-color: white;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 18px;
+    line-height: 48px;
+    width: 48px;
+  
+    /* place it at the bottom right corner */
+    position: fixed;
+    bottom: 30px;
+    right: 20px;
+    /* keep it at the top of everything else */
+    z-index: 100;
+    /* hide with opacity */
+    opacity: 0;
+    /* also add a translate effect */
+    transform: translateY(100px);
+    /* and a transition */
+    transition: all 0.5s ease;
+  }
+
+@tailwind components;
+@tailwind utilities;
+
+
+
+

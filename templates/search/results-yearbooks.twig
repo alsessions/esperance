@@ -1,0 +1,47 @@
+{% include '_partials/_head.twig' %}    
+
+<body class="bg-zinc-50">
+    {% include '_partials/_nav2.twig' %}
+    <main class="max-w-6xl mx-auto py-20  px-4 min-h-screen">
+      <div class="md:grid grid-cols-2 gap-6">
+        <div>
+      <h1 class="text-xl md:text-2xl text-yellow-900">Search Results</h1>
+        </div>
+        <div class="">
+      <form action="{{ url('search/results-books') }}">
+        <input type="search" name="q" aria-label="Search" placeholder="Search Again" class="py-1 px-2 rounded my-2">
+            <button type="submit" class="border border-1 border-orange-800 bg-orange-900  text-white py-1 px-2 ml-2 rounded">Go</button>
+          
+        </form>
+      </div>
+    </div>
+        {% set query = craft.app.request.getQueryParam('q') %}
+
+        {% set entries = craft.entries()
+          .section('books')
+          .search('*' ~ query ~ 'edu')
+          .all() %}
+  
+      
+        
+        {% if entries %}
+      <p class="text-lg my-10">Your search for <span class="bg-pink-800/30 px-1 rounded-sm">"{{ query }}"</span> returned the following results:</p>
+    
+          <div class="columns-2">
+            {% for entry in entries %}
+            <article class="mb-4">
+              <h2 class="text-lg text-yellow-800 font-sans">{{ entry.getLink() }}{% if entry.bookAuthor | length %} |
+              <span class="text-gray-700 font-sans">{{ entry.bookAuthor }}</span>{% endif %}</h2>
+            </article>
+            {% endfor %}
+          </div>
+        {% else %}
+          <p>Sorry, no results for <strong>{{ query }}</strong> were found.</p>
+        {% endif %}
+        
+      
+    </main>
+    {% include '_partials/_footer.twig' %}
+</body>
+
+</html>

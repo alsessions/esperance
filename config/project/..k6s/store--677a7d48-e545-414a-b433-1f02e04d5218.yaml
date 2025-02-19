@@ -1,0 +1,12 @@
+defaultPlacement: end
+enableVersioning: true
+handle: store
+name: Store
+propagationMethod: all
+siteSettings:
+  5667283f-37d8-4356-b040-3a9ce12ff30d: # Esperance Historical Museum
+    enabledByDefault: true
+    hasUrls: true
+    template: _partials/_single.twig
+    uriFormat: store
+type: single

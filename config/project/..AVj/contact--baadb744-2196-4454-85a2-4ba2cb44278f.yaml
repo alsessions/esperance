@@ -1,0 +1,12 @@
+defaultPlacement: end
+enableVersioning: true
+handle: contact
+name: Contact
+propagationMethod: all
+siteSettings:
+  5667283f-37d8-4356-b040-3a9ce12ff30d: # Esperance Historical Museum
+    enabledByDefault: true
+    hasUrls: true
+    template: contact.twig
+    uriFormat: contact
+type: single
