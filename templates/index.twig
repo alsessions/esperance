@@ -150,15 +150,16 @@
                     .orderBy('startDate asc')
                     .limit(10) %}
                 {% set events = myEntryQuery.all() %}
-                {% for event in events %}
-              
-                <h2 class="mt-6 text-xl">
-                    <a href="{{ event.url }}" class="text-yellow-800 font-medium hover:underline">{{ event.title }}</a>
-                </h2>
-                    <p class="text-sm mt-2">{{ event.startDate | date("F d, Y ") }}</p>
-
-                </div>
-                {% endfor %}
+                {% if events|length %}
+                    {% for event in events %}
+                        <h2 class="mt-6 text-xl">
+                            <a href="{{ event.url }}" class="text-yellow-800 font-medium hover:underline">{{ event.title }}</a>
+                        </h2>
+                        <p class="text-sm mt-2">{{ event.startDate | date("F d, Y ") }}</p>
+                    {% endfor %}
+                {% else %}
+                    <p class="mt-6">Please check back soon.</p>
+                {% endif %}
             </div>
         </div>
     </section>
