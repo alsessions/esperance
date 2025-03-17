@@ -25,16 +25,11 @@
                 {# Display the entries #}
                 {% for entry in entries %}
                 <article class="not-prose">
-                    {% if entry.endDate | length %}
+                    
                     <h3 class=" my-2  text-gray-800 font-sans">{{ entry.startDate | date("M d, Y") }}
-                        -
-                        {{ entry.endDate | date("M d, Y") }}</h3>
+                       </h3>
 
-                    {% else %}
-
-                    <h3 class="font-sans mt-1  text-gray-800">{{ entry.startDate | date("M d, Y") }}</h3>
-                    {% endif %}
-
+                   
                     <h2 class="mt-0 mb-4 text-lg font-serif  text-yellow-800">
                         <a href="{{ entry.url() }}" class="no-underline">{{ entry.title }}</a>
                     </h2>
