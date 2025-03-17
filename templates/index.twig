@@ -142,7 +142,7 @@
              
                 {% endfor %}
             </div>
-            <div>
+            <div class="mb-6">
                 <h2 class="text-xl text-yellow-800 uppercase font-semibold tracking-wide">Upcoming Events</h2>
                 {% set myEntryQuery = craft.entries()
                     .section('exhibits')
@@ -152,10 +152,19 @@
                 {% set events = myEntryQuery.all() %}
                 {% if events|length %}
                     {% for event in events %}
-                        <h2 class="mt-6 text-xl">
-                            <a href="{{ event.url }}" class="text-yellow-800 font-medium hover:underline">{{ event.title }}</a>
-                        </h2>
-                        <p class=" mt-2">{{ event.startDate | date("F d, Y ") }}{% if event.endDate | length %} - {{ event.endDate | date("F d, Y") }}{% endif %}</p>
+                    <div class="mt-6 flex">
+                        <div class="mr-3  flex-shrink-0">
+                            <svg class="w-7 h-7 text-yellow-800" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                            </svg>
+                        </div>
+                        <div class="flex flex-col">
+                            <h2 class="text-xl">
+                                <a href="{{ event.url }}" class="text-yellow-800 font-medium hover:underline">{{ event.title }}</a>
+                            </h2>
+                            <p class="mt-2">{{ event.startDate | date("F d, Y ") }}{% if event.endDate | length %} - {{ event.endDate | date("F d, Y") }}{% endif %}</p>
+                        </div>
+                    </div>
                     {% endfor %}
                 {% else %}
                     <p class="mt-6">Please check back soon.</p>

@@ -4,14 +4,12 @@
     {% include '_partials/_nav2.twig' %}
     <div class="my-20 max-w-6xl mx-auto px-4 prose">
         <h1 class="text-3xl md:text-5xl  text-yellow-900 mb-2">News &amp; Events</h1>
-        <h3 class="mt-0"><a href="/newsletters"class="no-underline hover:underline-offset-4 hover:underline font-sans">[News Archive]</a></h3>
-
+        <h3 class="mt-0"><a href="/newsletters" class="no-underline hover:underline-offset-4 hover:underline font-sans">[News Archive]</a></h3>
 
         <div>
-
-            <h2 class="text-2xl text-yellow-800 tracking-wide">
+            <h2 class="text-2xl text-yellow-800 tracking-wide mb-6">
                 Upcoming Events</h2>
-            <div class="grid grid-cols-3">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {# Create an entry query with the 'section' and 'limit' parameters #}
                 {% set myEntryQuery = craft.entries()
                 .section('exhibits')
@@ -24,27 +22,27 @@
                     
                 {# Display the entries #}
                 {% for entry in entries %}
-                <article class="not-prose">
-                    
-                    <h3 class=" my-2  text-gray-800 font-sans">{{ entry.startDate | date("M d, Y") }}
-                       </h3>
-
-                   
-                    <h2 class="mt-0 mb-4 text-lg font-serif  text-yellow-800">
-                        <a href="{{ entry.url() }}" class="no-underline">{{ entry.title }}</a>
-                    </h2>
-
-
+                <article class="not-prose bg-gray-50 rounded shadow p-4 h-full flex">
+                    <div class="mr-3 mt-1 flex-shrink-0">
+                        <svg class="w-7 h-7 text-yellow-800" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                        </svg>
+                    </div>
+                    <div class="flex flex-col">
+                        <h3 class="my-0 text-gray-800 font-sans">{{ entry.startDate | date("M d, Y") }}</h3>
+                        <h2 class="mt-0 mb-4 text-lg font-serif text-yellow-800">
+                            <a href="{{ entry.url() }}" class="no-underline hover:underline hover:underline-offset-2">{{ entry.title }}</a>
+                        </h2>
+                    </div>
                 </article>
                 {% endfor %}
             </div>
         </div>
     </div>
 
-
     <main class="min-h-screen">
         <div class="max-w-6xl mx-auto">
-            <h2 class="text-2xl text-yellow-800 tracking-wide px-4 mb-4">
+            <h2 class="text-2xl text-yellow-800 tracking-wide px-4 mb-6">
                 News from the Museum</h2>
         </div>
         <div class="max-w-6xl mx-auto pb-20 grid md:grid-cols-2 lg:grid-cols-3 gap-6 px-4 rounded">
@@ -59,29 +57,29 @@
 
             {# Display the entries #}
             {% for entry in entries %}
-            <article class="bg-gray-50 rounded shadow">
-
-
+            <article class="bg-gray-50 rounded shadow flex flex-col h-full">
                 {% set optimizedImages = entry.newsImage.one().newsImageOptimized %}
-                <a href="{{ entry.url() }}">
-                    <picture class="">
+                <a href="{{ entry.url() }}" class="block">
+                    <picture>
                         <source data-srcset="{{ optimizedImages.srcsetWebP() }}" data-sizes="100vw" type="image/webp" />
-                        <img class="lazyload w-full h-auto rounded-t " src="{{ optimizedImages.placeholderImage() }}"
+                        <img class="lazyload w-full h-auto rounded-t" src="{{ optimizedImages.placeholderImage() }}"
                             data-srcset="{{ optimizedImages.srcset() }}" data-sizes="100vw" />
                     </picture>
                 </a>
-                <h3 class="font-sans  text-yellow-900 px-2 mt-2">{{ entry.postDate | date("M d, Y") }}</h3>
-                <h2 class="mt-2 text-lg  px-2   text-yellow-800"><a href="{{ entry.url() }}">{{ entry.title | widont
-                        }}</a></h2>
+                <div class="p-4 flex flex-col flex-grow">
+                    <div class="flex flex-col flex-grow">
+                        <h3 class="font-sans text-yellow-900 mt-0 mb-0">{{ entry.postDate | date("M d, Y") }}</h3>
+                        <h2 class="mt-2 mb-3 text-lg text-yellow-800"><a href="{{ entry.url() }}" class="no-underline hover:underline hover:underline-offset-2">{{ entry.title | widont }}</a></h2>
 
-                {% if entry.richText | length %}
-                <div class="max-w-none  mt-2 pb-4 px-2">
-                    {{ entry.richText | chop(limit=15, unit='w', append='...', allowedTags="") | widont }}
+                        {% if entry.richText | length %}
+                        <div class="max-w-none mt-auto pb-2">
+                            {{ entry.richText | chop(limit=15, unit='w', append='...', allowedTags="") | widont }}
+                        </div>
+                        {% endif %}
+                    </div>
                 </div>
-                {% endif %}
             </article>
             {% endfor %}
-
         </div>
         <div class="max-w-6xl mx-auto mb-20">
         {% include '_partials/_patrons' %}
