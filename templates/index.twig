@@ -135,11 +135,19 @@
                 {% set entries = myEntryQuery.all() %}
                 {# Display the entries #}
                 {% for entry in entries %}
-                <h2 class="mt-6 text-xl">
-                    <a href="{{ entry.url }}" class="text-yellow-800 font-medium hover:underline">{{ entry.title }}</a>
-                </h2>
-                <p class="text-sm mt-2">{{ entry.dateUpdated | date("F d, Y") }}</p>
-             
+                <div class="mt-6 flex">
+                    <div class="mr-3 flex-shrink-0">
+                        <svg class="w-7 h-7 text-yellow-800" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z" />
+                        </svg>
+                    </div>
+                    <div class="flex flex-col">
+                        <h2 class="text-xl">
+                            <a href="{{ entry.url }}" class="text-yellow-800 font-medium hover:underline">{{ entry.title }}</a>
+                        </h2>
+                        <p class="text-base mt-2">{{ entry.dateUpdated | date("F d, Y") }}</p>
+                    </div>
+                </div>
                 {% endfor %}
             </div>
             <div class="mb-6">
