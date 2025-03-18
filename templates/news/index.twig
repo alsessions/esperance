@@ -30,7 +30,7 @@
                     </div>
                     <div class="flex flex-col">
                         <h3 class="my-0 text-gray-800 font-sans">{{ entry.startDate | date("M d, Y") }}</h3>
-                        <h2 class="mt-0 mb-4 text-lg font-serif text-yellow-800">
+                        <h2 class="mt-0 mb-4 text-lg font-sans font-bold text-yellow-800">
                             <a href="{{ entry.url() }}" class="no-underline hover:underline hover:underline-offset-2">{{ entry.title }}</a>
                         </h2>
                     </div>
@@ -69,7 +69,7 @@
                 <div class="p-4 flex flex-col flex-grow">
                     <div class="flex flex-col flex-grow">
                         <h3 class="font-sans text-yellow-900 mt-0 mb-0">{{ entry.postDate | date("M d, Y") }}</h3>
-                        <h2 class="mt-2 mb-3 text-lg text-yellow-800"><a href="{{ entry.url() }}" class="no-underline hover:underline hover:underline-offset-2">{{ entry.title | widont }}</a></h2>
+                        <h2 class="mt-2 mb-3 text-lg font-sans text-yellow-800"><a href="{{ entry.url() }}" class="no-underline hover:underline hover:underline-offset-2">{{ entry.title | widont }}</a></h2>
 
                         {% if entry.richText | length %}
                         <div class="max-w-none mt-auto pb-2">

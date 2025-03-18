@@ -144,8 +144,8 @@
                         </div>
                         <div class="flex flex-col">
                             <h3 class="my-0 text-gray-800 font-sans text-sm">{{ entry.dateUpdated | date("M d, Y") }}</h3>
-                            <h2 class="mt-1 mb-0 text-lg">
-                                <a href="{{ entry.url }}" class="text-amber-700 font-medium relative z-20 hover:underline">{{ entry.title }}</a>
+                            <h2 class="mt-1 mb-0 text-lg font-sans">
+                                <a href="{{ entry.url }}" class="text-amber-700 font-bold relative z-20 hover:underline">{{ entry.title }}</a>
                             </h2>
                         </div>
                     </article>
@@ -164,7 +164,7 @@
                     <div class="grid grid-cols-1 gap-4 mt-6">
                         {% for event in events %}
                         <article class="bg-gray-50 hover:bg-gray-100 rounded shadow hover:shadow-md transition-all duration-200 p-4 flex relative">
-                            <a href="{{ event.url }}" class="absolute inset-0 z-10" aria-label="{{ event.title }}"></a>
+                            <a href="{{ event.url }}" class="absolute inset-0 z-10 font-bold" aria-label="{{ event.title }}"></a>
                             <div class="mr-3 mt-1 flex-shrink-0">
                                 <svg class="w-6 h-6 text-amber-700" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
@@ -172,7 +172,7 @@
                             </div>
                             <div class="flex flex-col">
                                 <h3 class="my-0 text-gray-800 font-sans text-sm">{{ event.startDate | date("M d, Y") }}</h3>
-                                <h2 class="mt-1 mb-0 text-lg">
+                                <h2 class="mt-1 mb-0 text-lg font-sans">
                                     <a href="{{ event.url }}" class="text-amber-700 font-medium relative z-20 hover:underline">{{ event.title }}</a>
                                 </h2>
                             </div>
