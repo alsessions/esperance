@@ -22,7 +22,7 @@
                     
                 {# Display the entries #}
                 {% for entry in entries %}
-                <article class="not-prose bg-gray-50 rounded shadow p-4 h-full flex">
+                <article class="not-prose bg-gray-50 rounded shadow-md border border-gray-100 p-4 h-full flex transition-all duration-200 hover:shadow-lg">
                     <div class="mr-3 mt-1 flex-shrink-0">
                         <svg class="w-7 h-7 text-yellow-800" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
@@ -57,7 +57,7 @@
 
             {# Display the entries #}
             {% for entry in entries %}
-            <article class="bg-gray-50 rounded shadow flex flex-col h-full">
+            <article class="bg-gray-50 rounded shadow-md border border-gray-100 flex flex-col h-full transition-all duration-200 hover:shadow-lg">
                 {% set optimizedImages = entry.newsImage.one().newsImageOptimized %}
                 <a href="{{ entry.url() }}" class="block">
                     <picture>
