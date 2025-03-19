@@ -31,3 +31,16 @@ yarn-error.log
 *.cache
 *.log
 .php_cs.cache
+
+# Database backups
+*.sql
+*.sql.gz
+*.mysql
+*.dump
+*.bak
+*.backup
+*.db
+*.sql.zip
+
+# Deployment
+deploy.sh
