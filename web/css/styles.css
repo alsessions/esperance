@@ -1979,6 +1979,14 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active {
   height: 0.75rem;
 }
 
+.h-52 {
+  height: 13rem;
+}
+
+.h-44 {
+  height: 11rem;
+}
+
 .min-h-screen {
   min-height: 100vh;
 }
@@ -2347,6 +2355,11 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active {
 .object-cover {
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.object-center {
+  -o-object-position: center;
+     object-position: center;
 }
 
 .p-2 {
@@ -3273,6 +3286,10 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active {
 
   .md\:mt-0 {
     margin-top: 0px;
+  }
+
+  .md\:mb-16 {
+    margin-bottom: 4rem;
   }
 
   .md\:block {

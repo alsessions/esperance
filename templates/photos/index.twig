@@ -22,32 +22,58 @@
 
         {# Display the entries #}
         {% for entry in entries %}
-        <div class="mb-4 md:mb-28">
-            <h2 class="mb-4 text-xl md:text-xl   text-yellow-800"><a
-                href="{{ entry.url() }}">{{ entry.title | widont }}</a></h2>
-      
-            {% set optimizedImages = entry.photos.one().photoOptimized %}
-            <a href="{{ entry.url() }}">
-            <picture class="not-prose">
-                <source data-srcset="{{ optimizedImages.srcsetWebP() }}" 
-                        data-sizes="100vw"
-                        type="image/webp" />
-                        <img class="lazyload w-full h-auto"
-                     src="{{ optimizedImages.placeholderImage() }}"
-                     data-srcset="{{ optimizedImages.srcset() }}"
-                     data-sizes="100vw" />
-             </picture>
+        <div class="mb-4 md:mb-16 bg-white rounded shadow-sm hover:shadow-md transition-shadow duration-300 overflow-hidden">
+            <a href="{{ entry.url() }}" class="block h-44 overflow-hidden">
+                {% set optimizedImages = entry.photos.one().photoOptimized %}
+                <picture class="not-prose h-full w-full">
+                    <source data-srcset="{{ optimizedImages.srcsetWebP() }}" 
+                            data-sizes="100vw"
+                            type="image/webp" />
+                    <img class="lazyload w-full h-full object-cover object-center"
+                         src="{{ optimizedImages.placeholderImage() }}"
+                         data-srcset="{{ optimizedImages.srcset() }}"
+                         data-sizes="100vw" />
+                </picture>
             </a>
-                <div class="mt-2 pb-4 text-gray-800 italic">
-                    {{ entry.text }}
-            
+            <div class="p-4">
+                <h2 class="mb-2 text-xl md:text-lg font-sans text-blue-600 hover:text-blue-800">
+                    <a href="{{ entry.url() }}" class="flex items-center hover:underline">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5 text-blue-600 mr-2 flex-shrink-0">
+                            <path d="M19.5 21a3 3 0 003-3v-4.5a3 3 0 00-3-3h-15a3 3 0 00-3 3V18a3 3 0 003 3h15zM1.5 10.146V6a3 3 0 013-3h5.379a2.25 2.25 0 011.59.659l2.122 2.121c.14.141.331.22.53.22H19.5a3 3 0 013 3v1.146A4.483 4.483 0 0019.5 9h-15a4.483 4.483 0 00-3 1.146z" />
+                        </svg>
+                        <span>{{ entry.title | widont }}</span>
+                    </a>
+                </h2>
+                {% set childCount = craft.entries.section('photos').descendantOf(entry.id).count() %}
+                {% set photoCount = entry.photos.count() %}
+                <div class="text-sm text-gray-600 mt-1 flex items-center">
+                    {% if childCount > 0 %}
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4 mr-1">
+                            <path d="M2 4.5A2.5 2.5 0 014.5 2h11a2.5 2.5 0 012.5 2.5v11a2.5 2.5 0 01-2.5 2.5h-11A2.5 2.5 0 012 15.5v-11z" />
+                            <path d="M2.75 9.083a.75.75 0 000 1.5h14.5a.75.75 0 000-1.5H2.75z" />
+                        </svg>
+                        {% if childCount == 1 %}
+                            <span>{{ childCount }} gallery</span>
+                        {% else %}
+                            <span>{{ childCount }} galleries</span>
+                        {% endif %}
+                    {% else %}
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4 mr-1">
+                            <path fill-rule="evenodd" d="M1 5.25A2.25 2.25 0 013.25 3h13.5A2.25 2.25 0 0119 5.25v9.5A2.25 2.25 0 0116.75 17H3.25A2.25 2.25 0 011 14.75v-9.5zm1.5 5.81v3.69c0 .414.336.75.75.75h13.5a.75.75 0 00.75-.75v-2.69l-2.22-2.219a.75.75 0 00-1.06 0l-1.91 1.909.47.47a.75.75 0 11-1.06 1.06L6.53 8.091a.75.75 0 00-1.06 0l-2.97 2.97zM12 7a1 1 0 11-2 0 1 1 0 012 0z" clip-rule="evenodd" />
+                        </svg>
+                        {% if photoCount == 1 %}
+                            <span>{{ photoCount }} photo</span>
+                        {% else %}
+                            <span>{{ photoCount }} photos</span>
+                        {% endif %}
+                    {% endif %}
                 </div>
-                
-     
+                <div class="mt-2 text-gray-700 italic text-sm">
+                    {{ entry.text }}
+                </div>
+            </div>
         </div>
         {% endfor %}
-
-
     </main>
     {% include '_partials/_footer.twig' %}
 </body>

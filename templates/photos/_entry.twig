@@ -143,25 +143,25 @@
     <span class="hidden md:inline mr-1 font-sans">Click</span><span class="md:hidden mr-1">Tap</span> for full image</span>
             </div>
    
-<div class="grid md:grid-cols-3 lg:grid-cols-4 gap-2 md:gap-10" id="lightgallery" >
-        {% for photo in entry.photos.all() %}
-      
-                <a href="{{ photo.getUrl() }}">
-     <picture class="not-prose flex items-center">
-         <source data-srcset="{{ photo.optimizedSquare.srcsetWebP() }}" 
-                 data-sizes="100vw"
-                 type="image/webp" />
-                 <img class="lazyload w-full h-auto rounded"
-              src="{{ photo.optimizedSquare.placeholderImage() }}"
-              data-srcset="{{ photo.optimizedSquare.srcset() }}"
-              data-sizes="100vw" />
-      </picture>
-                </a>
-   
-        
-           {% endfor %}
+<div class="grid md:grid-cols-3 lg:grid-cols-4 gap-2 md:gap-10" id="lightgallery">
+    {% for photo in entry.photos.all() %}
+        <a href="{{ photo.getUrl() }}">
+            <picture class="not-prose flex items-center">
+                <source 
+                    data-srcset="{{ photo.optimizedSquare.srcsetWebP() }}" 
+                    data-sizes="100vw"
+                    type="image/webp" 
+                />
+                <img 
+                    class="lazyload w-full h-auto rounded"
+                    src="{{ photo.optimizedSquare.placeholderImage() }}"
+                    data-srcset="{{ photo.optimizedSquare.srcset() }}"
+                    data-sizes="100vw" 
+                />
+            </picture>
+        </a>
+    {% endfor %}
 </div>
-
 
 </div>
 
