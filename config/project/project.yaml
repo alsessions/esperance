@@ -1,4 +1,4 @@
-dateModified: 1739997174
+dateModified: 1750346724
 elementSources:
   craft\elements\Category:
     -
@@ -145,21 +145,21 @@ fs:
     hasUrls: true
     name: Images
     settings:
-      path: /var/www/esperance/web/images
+      path: '@webroot/images'
     type: craft\fs\Local
-    url: //esperancemuseum.org/images
+    url: '@web/images'
   newsImages:
     hasUrls: true
     name: 'News Images'
     settings:
-      path: /var/www/esperance/web/news-images
+      path: '@webroot/news-images'
     type: craft\fs\Local
-    url: //esperancemuseum.org/news-images
+    url: '@web/news-images'
   photos:
     hasUrls: true
     name: Photos
     settings:
-      path: /var/www/esperance/web/pictures
+      path: '@webroot/pictures'
     type: craft\fs\Local
     url: '@web/pictures'
 meta:
@@ -650,7 +650,7 @@ system:
   live: true
   name: 'The Esperance Historical Society & Museum'
   retryDuration: null
-  schemaVersion: 4.5.3.0
+  schemaVersion: 4.15.0.0
   timeZone: America/New_York
 users:
   allowPublicRegistration: false

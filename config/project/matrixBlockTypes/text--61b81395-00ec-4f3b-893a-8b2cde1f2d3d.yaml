@@ -32,15 +32,17 @@ fields:
     settings:
       availableTransforms: '*'
       availableVolumes: '*'
+      characterLimit: null
       ckeConfig: 7201d093-9c54-49e4-bd3b-a4c0c8f312ab # Default
       columnType: text
       defaultTransform: null
-      enableSourceEditingForNonAdmins: false
       purifierConfig: null
       purifyHtml: true
       showUnpermittedFiles: false
       showUnpermittedVolumes: false
       showWordCount: false
+      sourceEditingGroups:
+        - __ADMINS__
       wordLimit: null
     translationKeyFormat: null
     translationMethod: none

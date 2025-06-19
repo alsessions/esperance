@@ -8,6 +8,7 @@ searchable: false
 settings:
   availableTransforms: '*'
   availableVolumes: '*'
+  characterLimit: null
   ckeConfig: ef049fa2-931e-4e6b-924b-9a9a8494c2f9 # Simple
   columnType: text
   defaultTransform: null
