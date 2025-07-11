@@ -1,4 +1,4 @@
-dateModified: 1750346724
+dateModified: 1752276751
 elementSources:
   craft\elements\Category:
     -
@@ -289,10 +289,6 @@ plugins:
       successFlashMessage: 'Your message has been sent.'
       toEmail: fultonchain@gmail.com
   cp-clearcache:
-    edition: standard
-    enabled: true
-    schemaVersion: 1.0.0
-  cp-field-inspect:
     edition: standard
     enabled: true
     schemaVersion: 1.0.0
