@@ -11,7 +11,7 @@ settings:
   characterLimit: null
   ckeConfig: ef049fa2-931e-4e6b-924b-9a9a8494c2f9 # Simple
   columnType: text
-  defaultTransform: null
+  defaultTransform: 29967758-61f8-457b-b2cd-6f82cac8820f # 640 Wide
   purifierConfig: null
   purifyHtml: true
   showUnpermittedFiles: false

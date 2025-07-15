@@ -13,3 +13,5 @@ toolbar:
   - '|'
   - bulletedList
   - numberedList
+  - removeFormat
+  - sourceEditing
