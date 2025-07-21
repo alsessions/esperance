@@ -1,4 +1,4 @@
-dateModified: 1752612654
+dateModified: 1753108747
 elementSources:
   craft\elements\Category:
     -
@@ -134,12 +134,15 @@ elementSources:
 email:
   fromEmail: info@esperancemuseum.org
   fromName: 'Esperance Historical Museum'
-  replyToEmail: info@esperancemuseum.org
+  replyToEmail: esperancehistoricalsociety@gmail.com
   template: null
   transportSettings:
-    password: sc3nicRt20
+    host: smtp.zoho.com
+    password: 3cenicRt.20
+    port: '465'
+    useAuthentication: '1'
     username: info@esperancemuseum.org
-  transportType: craft\mail\transportadapters\Gmail
+  transportType: craft\mail\transportadapters\Smtp
 fs:
   images:
     hasUrls: true

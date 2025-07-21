@@ -808,11 +808,11 @@
         },
         {
             "name": "craftcms/cms",
-            "version": "4.16.4",
+            "version": "4.16.5",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/cms/zipball/16e2964e5ff17c2bf4c36a9ee656da51ebf7e911",
-                "reference": "16e2964e5ff17c2bf4c36a9ee656da51ebf7e911",
+                "url": "https://api.github.com/repos/craftcms/cms/zipball/3b5692307050a341450f45fc9113cd0c5bc1eb1e",
+                "reference": "3b5692307050a341450f45fc9113cd0c5bc1eb1e",
                 "shasum": ""
             },
             "require": {
@@ -897,7 +897,7 @@
                 "docs": "https://craftcms.com/docs/4.x/",
                 "rss": "https://github.com/craftcms/cms/releases.atom"
             },
-            "time": "2025-07-08T23:49:57+00:00"
+            "time": "2025-07-18T00:52:45+00:00"
         },
         {
             "name": "craftcms/contact-form",
@@ -4267,16 +4267,16 @@
         },
         {
             "name": "phpstan/phpdoc-parser",
-            "version": "2.1.0",
+            "version": "2.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpstan/phpdoc-parser.git",
-                "reference": "9b30d6fd026b2c132b3985ce6b23bec09ab3aa68"
+                "reference": "b9e61a61e39e02dd90944e9115241c7f7e76bfd8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpstan/phpdoc-parser/zipball/9b30d6fd026b2c132b3985ce6b23bec09ab3aa68",
-                "reference": "9b30d6fd026b2c132b3985ce6b23bec09ab3aa68",
+                "url": "https://api.github.com/repos/phpstan/phpdoc-parser/zipball/b9e61a61e39e02dd90944e9115241c7f7e76bfd8",
+                "reference": "b9e61a61e39e02dd90944e9115241c7f7e76bfd8",
                 "shasum": ""
             },
             "require": {
@@ -4308,9 +4308,9 @@
             "description": "PHPDoc parser with support for nullable, intersection and generic types",
             "support": {
                 "issues": "https://github.com/phpstan/phpdoc-parser/issues",
-                "source": "https://github.com/phpstan/phpdoc-parser/tree/2.1.0"
+                "source": "https://github.com/phpstan/phpdoc-parser/tree/2.2.0"
             },
-            "time": "2025-02-19T13:28:12+00:00"
+            "time": "2025-07-13T07:04:09+00:00"
         },
         {
             "name": "pixelandtonic/imagine",
@@ -7751,11 +7751,11 @@
         },
         {
             "name": "verbb/expanded-singles",
-            "version": "2.0.5",
+            "version": "2.0.6",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/verbb/expanded-singles/zipball/7a456deb91a8bd138c6f249c7ab5ff6eba9ea90e",
-                "reference": "7a456deb91a8bd138c6f249c7ab5ff6eba9ea90e",
+                "url": "https://api.github.com/repos/verbb/expanded-singles/zipball/5162d1695c6d644221b6cd110cd6d636e6955f52",
+                "reference": "5162d1695c6d644221b6cd110cd6d636e6955f52",
                 "shasum": ""
             },
             "require": {
@@ -7801,15 +7801,15 @@
                 "docs": "https://github.com/verbb/expanded-singles",
                 "rss": "https://github.com/verbb/expanded-singles/commits/v2.atom"
             },
-            "time": "2023-08-03T06:32:58+00:00"
+            "time": "2025-07-18T09:58:34+00:00"
         },
         {
             "name": "verbb/formie",
-            "version": "2.1.51",
+            "version": "2.1.52",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/verbb/formie/zipball/206c7b87e723f71280576d53887ff3f16403199d",
-                "reference": "206c7b87e723f71280576d53887ff3f16403199d",
+                "url": "https://api.github.com/repos/verbb/formie/zipball/55c3137ec15e74657b0e4e4ea958a4fcaed7bdbe",
+                "reference": "55c3137ec15e74657b0e4e4ea958a4fcaed7bdbe",
                 "shasum": ""
             },
             "require": {
@@ -7870,7 +7870,7 @@
                 "docs": "https://github.com/verbb/formie",
                 "rss": "https://github.com/verbb/formie/commits/v2.atom"
             },
-            "time": "2025-07-03T03:30:04+00:00"
+            "time": "2025-07-18T09:58:39+00:00"
         },
         {
             "name": "vlucas/phpdotenv",
