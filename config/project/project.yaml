@@ -1,4 +1,4 @@
-dateModified: 1753720487
+dateModified: 1753813848
 elementSources:
   craft\elements\Category:
     -
@@ -580,7 +580,7 @@ plugins:
                   - verbb\formie\integrations\captchas\Question
                 -
                   - enabled
-                  - '1'
+                  - '0'
                 -
                   - saveSpam
                   - true
@@ -613,10 +613,10 @@ plugins:
                         - recaptcha
                       -
                         - secretKey
-                        - 6LdvV4srAAAAABi6lcxAXz4oWYsqUaaAFP_vY77g
+                        - 6LctGJMrAAAAAPueN0lz3BO6pAkpxef6dF6By3RV
                       -
                         - siteKey
-                        - 6LdvV4srAAAAAGQg_3mYrYcu4dQwNHMyekyaUnE4
+                        - 6LctGJMrAAAAAJqJRIVZERLKQpqDiQbRKOF4E5Yc
                       -
                         - type
                         - v3
@@ -628,13 +628,13 @@ plugins:
                         - light
                       -
                         - badge
-                        - bottomright
+                        - inline
                       -
                         - language
                         - en
                       -
                         - minScore
-                        - 0.3
+                        - 0.5
                       -
                         - scriptLoadingMethod
                         - asyncDefer
