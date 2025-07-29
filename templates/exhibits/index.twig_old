@@ -15,25 +15,15 @@
                 </div>
             </article>
         {# Create an entry query with the 'section' and 'limit' parameters #}
-        {# Fetch sticky entries #}
-        {% set stickyEntries = craft.entries()
-          .section('exhibits')
-          .sticky(true)
-          .orderBy('startDate asc')
-          .limit(10)
-          .all() %}
-
-        {# Fetch upcoming entries #}
-        {% set upcomingEntries = craft.entries()
+        {% set myEntryQuery = craft.entries()
           .section('exhibits')
           .startDate('>= '~ now|atom)
           .orderBy('startDate asc')
           .limit(10)
-          .all() %}
+           %}
 
-        {# Merge and sort entries: sticky first, then by startDate #}
-        {% set entries = stickyEntries|merge(upcomingEntries)|unique %}
-        {% set entries = entries|sort((a, b) => b.sticky <=> a.sticky ?: a.startDate <=> b.startDate) %}
+        {# Fetch the entries #}
+        {% set entries = myEntryQuery.all() %}
 
         {# Display the entries #}
         {% for entry in entries %}

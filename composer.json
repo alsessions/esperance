@@ -5,12 +5,14 @@
         "craftcms/contact-form": "^3.0.0",
         "craftcms/feed-me": "^5.3.0",
         "ether/seo": "^4.2",
+        "hybridinteractive/craft-contact-form-extensions": "^4.2.2",
         "mmikkel/cp-clearcache": "^1.2",
         "nystudio107/craft-imageoptimize": "^4.0.2",
+        "ostark/craft-async-queue": "3.2.1",
         "spicyweb/craft-quick-field": "^2.0",
         "topshelfcraft/wordsmith": "^4.4.0",
         "verbb/expanded-singles": "^2.0",
-        "verbb/formie": "^2.1.1",
+        "verbb/formie": "2.2.1",
         "vlucas/phpdotenv": "^5.4.0"
     },
     "require-dev": {

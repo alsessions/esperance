@@ -1,4 +1,4 @@
-dateModified: 1753108747
+dateModified: 1753720487
 elementSources:
   craft\elements\Category:
     -
@@ -134,12 +134,12 @@ elementSources:
 email:
   fromEmail: info@esperancemuseum.org
   fromName: 'Esperance Historical Museum'
-  replyToEmail: esperancehistoricalsociety@gmail.com
+  replyToEmail: info@esperancemuseum.org
   template: null
   transportSettings:
     host: smtp.zoho.com
     password: 3cenicRt.20
-    port: '465'
+    port: '587'
     useAuthentication: '1'
     username: info@esperancemuseum.org
   transportType: craft\mail\transportadapters\Smtp
@@ -232,7 +232,6 @@ meta:
     4056916d-30fa-4020-b9af-2694d0825a9d: Description # Description
     5667283f-37d8-4356-b040-3a9ce12ff30d: 'Esperance Historical Museum' # Esperance Historical Museum
     6418051f-b4b9-478a-92cd-fafbe3b180df: Type # Type
-    9623268d-f754-48f2-beb9-68c3a79a9cf9: PayPal # PayPal
     29967758-61f8-457b-b2cd-6f82cac8820f: '640 Wide' # 640 Wide
     66539385-6c72-4d78-a0fc-a965aedc380e: 'Item Type' # Item Type
     79870395-1b02-475c-a077-89f57505fa69: 'Featured Item' # Featured Item
@@ -257,7 +256,6 @@ meta:
     cf74b3ea-7b9a-4c0f-8d56-6ee9eba748e4: 'News Image Optimized' # News Image Optimized
     d2bc249a-926e-4717-9fda-960f2c1d5dea: Donate # Donate
     d2eb18a9-ad0f-425d-bc08-979824a2b91d: 'Esperance History' # Esperance History
-    d7fe58cc-bb7f-4667-ba16-25792ef8cbd3: 'Contact Form' # Contact Form
     daf14386-595d-486f-af5f-ea8c2b0f1344: Membership # Membership
     dba2cec3-c4ee-4cf4-9687-3b5015ec67f5: 'ISBN Number' # ISBN Number
     e1f14656-b837-40fb-b976-ec4d12a3addd: Hero # Hero
@@ -266,8 +264,9 @@ meta:
     e75b544d-bc7f-402a-9f8d-371bf5cba540: Default # Default
     ec86cbbd-ed49-48dc-b878-b1037106f0bd: 'Call Number' # Call Number
     eea691c2-e601-4811-b56d-e9e249e6dd1b: Text # Text
-    eee83a3c-2e6e-4629-883b-411aab711040: New # New
     ef049fa2-931e-4e6b-924b-9a9a8494c2f9: Simple # Simple
+    f0e4fca5-feff-495f-9596-2ad71adeac4e: Sticky # Sticky
+    f011b052-0160-4948-8c08-1fd957164f97: New # New
     f39812de-8959-4182-ab34-2631b2ce0216: Support # Support
     f64689b9-8bca-415d-8d4d-2c18e0697972: 'Site Images' # Site Images
     fafb9916-a445-47ea-9ed2-f6831ba8fca9: 'Esperance Historical Museum' # Esperance Historical Museum
@@ -276,13 +275,17 @@ meta:
     fe9f7b8e-fe83-4ea3-8d90-9ee27e9d8988: Default # Default
     ff63d69e-8aac-4f7f-b5f0-a4f5dc28462f: 'Newsletter Index' # Newsletter Index
 plugins:
+  async-queue:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
   ckeditor:
     edition: standard
     enabled: true
     schemaVersion: 3.0.0.0
   contact-form:
     edition: standard
-    enabled: true
+    enabled: false
     schemaVersion: 1.0.0
     settings:
       allowAttachments: ''
@@ -291,6 +294,29 @@ plugins:
       prependSubject: 'New message from Esperance Historical Museum'
       successFlashMessage: 'Your message has been sent.'
       toEmail: fultonchain@gmail.com
+  contact-form-extensions:
+    edition: standard
+    enabled: false
+    schemaVersion: 1.0.1
+    settings:
+      confirmationSubject: ''
+      confirmationTemplate: ''
+      enableConfirmationEmail: ''
+      enableDatabase: '1'
+      enableRecaptchaOverride: ''
+      enableTemplateOverwrite: ''
+      notificationTemplate: ''
+      recaptcha: '1'
+      recaptchaDataBadge: bottomright
+      recaptchaDebug: ''
+      recaptchaHideBadge: ''
+      recaptchaSecretKey: 6Ld5j4srAAAAAN1xn6lj_25T1Lu20rlCx4durHQC
+      recaptchaSiteKey: 6Ld5j4srAAAAANA6v8krw9v6bB-VMx_KEyAtZbm6
+      recaptchaThreshold: '0.5'
+      recaptchaTimeout: '5'
+      recaptchaUrl: ''
+      recaptchaVerificationUrl: ''
+      recaptchaVersion: '3'
   cp-clearcache:
     edition: standard
     enabled: true
@@ -299,30 +325,46 @@ plugins:
     edition: standard
     enabled: true
     schemaVersion: 1.0.0
-  feed-me:
-    edition: standard
-    enabled: true
-    schemaVersion: 5.1.1
   formie:
     edition: standard
     enabled: true
-    licenseKey: POLUPTA3LMCTLDPCVSA573S8
-    schemaVersion: 2.0.19
+    licenseKey: 6IZ401QZ1GRKXNSDWXH9J7ZE
+    schemaVersion: 2.0.21
     settings:
       ajaxTimeout: 10
       alertEmails: null
       captchas:
         __assoc__:
           -
-            - recaptcha
+            - akismet
             -
               __assoc__:
                 -
                   - type
-                  - verbb\formie\integrations\captchas\Recaptcha
+                  - verbb\formie\integrations\captchas\Akismet
                 -
                   - enabled
-                  - '1'
+                  - '0'
+                -
+                  - saveSpam
+                  - true
+                -
+                  - settings
+                  -
+                    __assoc__:
+                      -
+                        - handle
+                        - akismet
+          -
+            - captchaEu
+            -
+              __assoc__:
+                -
+                  - type
+                  - verbb\formie\integrations\captchas\CaptchaEu
+                -
+                  - enabled
+                  - '0'
                 -
                   - saveSpam
                   - true
@@ -332,34 +374,108 @@ plugins:
                     __assoc__:
                       0:
                         - handle
-                        - recaptcha
-                      1:
-                        - secretKey
-                        - 6LdcJxQpAAAAANLoUQvpDIcKSx2jw3LjC3Q02mpk
-                      2:
-                        - siteKey
-                        - 6LdcJxQpAAAAAEG5iL5WD6zBvExuyjnOVFlgRk4c
+                        - captchaEu
                       3:
-                        - type
-                        - v3
-                      4:
-                        - size
-                        - normal
-                      5:
-                        - theme
-                        - light
-                      6:
-                        - badge
-                        - bottomright
-                      7:
-                        - language
-                        - en
-                      8:
-                        - minScore
-                        - 0.5
-                      10:
+                        - endPoint
+                        - 'https://www.captcha.eu'
+          -
+            - cleantalk
+            -
+              __assoc__:
+                -
+                  - type
+                  - verbb\formie\integrations\captchas\CleanTalk
+                -
+                  - enabled
+                  - '0'
+                -
+                  - saveSpam
+                  - true
+                -
+                  - settings
+                  -
+                    __assoc__:
+                      -
+                        - handle
+                        - cleantalk
+          -
+            - turnstile
+            -
+              __assoc__:
+                -
+                  - type
+                  - verbb\formie\integrations\captchas\Turnstile
+                -
+                  - enabled
+                  - '0'
+                -
+                  - saveSpam
+                  - true
+                -
+                  - settings
+                  -
+                    __assoc__:
+                      0:
+                        - handle
+                        - turnstile
+                      3:
                         - scriptLoadingMethod
                         - asyncDefer
+                      4:
+                        - theme
+                        - auto
+                      5:
+                        - size
+                        - normal
+                      6:
+                        - appearance
+                        - always
+          -
+            - duplicate
+            -
+              __assoc__:
+                -
+                  - type
+                  - verbb\formie\integrations\captchas\Duplicate
+                -
+                  - enabled
+                  - '0'
+                -
+                  - saveSpam
+                  - true
+                -
+                  - settings
+                  -
+                    __assoc__:
+                      -
+                        - handle
+                        - duplicate
+          -
+            - friendlyCaptcha
+            -
+              __assoc__:
+                -
+                  - type
+                  - verbb\formie\integrations\captchas\FriendlyCaptcha
+                -
+                  - enabled
+                  - '0'
+                -
+                  - saveSpam
+                  - true
+                -
+                  - settings
+                  -
+                    __assoc__:
+                      0:
+                        - handle
+                        - friendlyCaptcha
+                      3:
+                        - language
+                        - en
+                      4:
+                        - startMode
+                        - none
           -
             - hcaptcha
             -
@@ -377,50 +493,24 @@ plugins:
                   - settings
                   -
                     __assoc__:
-                      -
+                      0:
                         - handle
                         - hcaptcha
-                      -
-                        - secretKey
-                        - '0xD1607085CBd191CD620B306333A96f003B63388e'
-                      -
-                        - siteKey
-                        - e592f469-0426-401e-bc4c-3394b822f5fd
-                      -
+                      3:
                         - size
                         - normal
-                      -
+                      4:
                         - theme
                         - light
-                      -
+                      5:
                         - language
                         - en
-                      -
+                      6:
                         - minScore
                         - 0.5
-                      -
+                      7:
                         - scriptLoadingMethod
                         - asyncDefer
-          -
-            - duplicate
-            -
-              __assoc__:
-                -
-                  - type
-                  - verbb\formie\integrations\captchas\Duplicate
-                -
-                  - enabled
-                  - '1'
-                -
-                  - saveSpam
-                  - true
-                -
-                  - settings
-                  -
-                    __assoc__:
-                      -
-                        - handle
-                        - duplicate
           -
             - honeypot
             -
@@ -462,12 +552,12 @@ plugins:
                         - handle
                         - javascript
           -
-            - friendlyCaptcha
+            - OopSpam
             -
               __assoc__:
                 -
                   - type
-                  - verbb\formie\integrations\captchas\FriendlyCaptcha
+                  - verbb\formie\integrations\captchas\OopSpam
                 -
                   - enabled
                   - '0'
@@ -478,35 +568,79 @@ plugins:
                   - settings
                   -
                     __assoc__:
-                      0:
+                      -
                         - handle
-                        - friendlyCaptcha
-                      3:
+                        - OopSpam
+          -
+            - question
+            -
+              __assoc__:
+                -
+                  - type
+                  - verbb\formie\integrations\captchas\Question
+                -
+                  - enabled
+                  - '1'
+                -
+                  - saveSpam
+                  - true
+                -
+                  - settings
+                  -
+                    __assoc__:
+                      -
+                        - handle
+                        - question
+          -
+            - recaptcha
+            -
+              __assoc__:
+                -
+                  - type
+                  - verbb\formie\integrations\captchas\Recaptcha
+                -
+                  - enabled
+                  - '1'
+                -
+                  - saveSpam
+                  - true
+                -
+                  - settings
+                  -
+                    __assoc__:
+                      -
+                        - handle
+                        - recaptcha
+                      -
+                        - secretKey
+                        - 6LdvV4srAAAAABi6lcxAXz4oWYsqUaaAFP_vY77g
+                      -
+                        - siteKey
+                        - 6LdvV4srAAAAAGQg_3mYrYcu4dQwNHMyekyaUnE4
+                      -
+                        - type
+                        - v3
+                      -
+                        - size
+                        - normal
+                      -
+                        - theme
+                        - light
+                      -
+                        - badge
+                        - bottomright
+                      -
                         - language
                         - en
-          -
-            - turnstile
-            -
-              __assoc__:
-                -
-                  - type
-                  - verbb\formie\integrations\captchas\Turnstile
-                -
-                  - enabled
-                  - '0'
-                -
-                  - saveSpam
-                  - true
-                -
-                  - settings
-                  -
-                    __assoc__:
-                      0:
-                        - handle
-                        - turnstile
-                      3:
+                      -
+                        - minScore
+                        - 0.3
+                      -
                         - scriptLoadingMethod
                         - asyncDefer
+                      -
+                        - enterpriseType
+                        - score
       defaultDateDisplayType: calendar
       defaultDateTime: null
       defaultDateValueOption: ''
@@ -525,6 +659,7 @@ plugins:
       includeRevisionElementUsage: false
       maxIncompleteSubmissionAge: 30
       maxSentNotificationsAge: 30
+      outputConsoleMessages: true
       pdfPaperOrientation: portrait
       pdfPaperSize: letter
       pluginName: Formie
@@ -532,11 +667,13 @@ plugins:
       saveSpam: true
       sendEmailAlerts: false
       sentNotifications: true
-      spamBehaviour: showSuccess
-      spamBehaviourMessage: ''
+      setOnlyCurrentPagePayload: false
+      spamBehaviour: showMessage
+      spamBehaviourMessage: 'Marked as SPAM'
       spamEmailNotifications: false
       spamKeywords: ''
       spamLimit: 500
+      useEmailTemplateForFieldVariables: false
       useQueueForIntegrations: true
       useQueueForNotifications: true
       validateCustomTemplates: true

@@ -69,6 +69,18 @@ fieldLayouts:
             width: 100
           -
             elementCondition: null
+            fieldUid: f0e4fca5-feff-495f-9596-2ad71adeac4e # Sticky
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 28228d06-a253-4290-8525-811d655a672a
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
             fieldUid: 0d967ad9-7e46-4156-a765-597a9136ca13 # Subtitle
             instructions: null
             label: null

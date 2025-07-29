@@ -1,0 +1,14 @@
+columnSuffix: zwpwarud
+contentColumnType: boolean
+fieldGroup: fc60fa7d-ed36-45c2-9c49-d8ef1d0082d4 # Common
+handle: sticky
+instructions: 'If selected this entry will remain at the top of the lists until the end date.'
+name: Sticky
+searchable: false
+settings:
+  default: false
+  offLabel: 'Off'
+  onLabel: 'On'
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Lightswitch

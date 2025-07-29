@@ -49,31 +49,19 @@
             <h2 class="text-2xl text-yellow-800 tracking-wide mb-6 mt-20">
                 Other Events</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                       {# Create an entry query with the 'section' and 'limit' parameters #}
-        {# Fetch sticky entries #}
-        {% set stickyEntries = craft.entries()
-          .section('exhibits')
-          .sticky(true)
-          .orderBy('startDate asc')
-          .limit(10)
-          .all() %}
+                {# Create an entry query with the 'section' and 'limit' parameters #}
+                {% set myEntryQuery = craft.entries()
+                .section('exhibits')
+                .startDate('>= '~ now|atom)
+                .id('not '~ entry.id)
+                .orderBy('startDate asc')
+                .limit(10) %}
 
-        {# Fetch upcoming entries #}
-        {% set upcomingEntries = craft.entries()
-          .section('exhibits')
-          .startDate('>= '~ now|atom)
-          .orderBy('startDate asc')
-          .limit(10)
-          .all() %}
-
-        {# Merge and sort entries: sticky first, then by startDate #}
-
-        {% set entries = stickyEntries|merge(upcomingEntries)|unique %}
-        
-        {% set entries = entries|sort((a, b) => b.sticky <=> a.sticky ?: a.startDate <=> b.startDate) %}
-
-        {# Display the entries #}
-        {% for entry in entries %}
+                {# Fetch the entries #}
+                {% set entries = myEntryQuery.all() %}
+                    
+                {# Display the entries #}
+                {% for entry in entries %}
                 <article class="not-prose bg-gray-50 rounded shadow-md border border-gray-100 p-4 h-full flex transition-all duration-200 hover:shadow-lg">
                     <div class="mr-3 mt-1 flex-shrink-0">
                         <svg class="w-7 h-7 text-yellow-800" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -81,7 +69,7 @@
                         </svg>
                     </div>
                     <div class="flex flex-col">
-                      <h3 class=" my-2 text-lg  text-yellow-900">{{ entry.startDate | date("M d, Y") }} {% if  entry.endDate|length %} - {{  entry.endDate | date("M d, Y") }}{%endif%}</h3>       
+                        <h3 class="my-0 text-gray-800 font-sans">{{ entry.startDate | date("M d, Y") }}</h3>
                         <h2 class="mt-0 mb-4 text-lg font-sans font-bold text-yellow-800">
                             <a href="{{ entry.url() }}" class="no-underline hover:underline hover:underline-offset-2">{{ entry.title }}</a>
                         </h2>
