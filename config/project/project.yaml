@@ -1,4 +1,4 @@
-dateModified: 1758210217
+dateModified: 1758213960
 elementSources:
   craft\elements\Category:
     -
@@ -613,13 +613,13 @@ plugins:
                         - recaptcha
                       -
                         - secretKey
-                        - 6LctGJMrAAAAAPueN0lz3BO6pAkpxef6dF6By3RV
+                        - 6LexnosrAAAAALPLvtuWjNNk3HVXktmrVES5Kqz7
                       -
                         - siteKey
-                        - 6LctGJMrAAAAAJqJRIVZERLKQpqDiQbRKOF4E5Yc
+                        - 6LexnosrAAAAAIaAMnGLO2Lz4zP50ybXUlk5Yrol
                       -
                         - type
-                        - v3
+                        - v2_checkbox
                       -
                         - size
                         - normal
