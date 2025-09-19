@@ -12,7 +12,7 @@
         "spicyweb/craft-quick-field": "^2.0",
         "topshelfcraft/wordsmith": "^4.4.0",
         "verbb/expanded-singles": "^2.0",
-        "verbb/formie": "2.2.1",
+        "verbb/formie": "^2.2.1",
         "vlucas/phpdotenv": "^5.4.0"
     },
     "require-dev": {
