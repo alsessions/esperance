@@ -1,0 +1,59 @@
+fieldLayouts:
+  21d8fed4-a3b1-48df-b2b2-5af576f37639:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            inputType: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 9b00a63a-1651-41c3-8840-196f6becf8bd
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: d46d583f-0944-4e99-a333-5aa96073d70a # Patron Link
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: cc3af03b-39c5-4340-b33f-8fbd35d8b038
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 98594b1e-f4c1-4b68-a89f-c3c4210441c5
+        userCondition: null
+handle: default
+hasTitleField: true
+name: Default
+section: 85843cc3-14c5-4399-a6c0-1b5ef4c2823a # Patrons
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+sortOrder: 1
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

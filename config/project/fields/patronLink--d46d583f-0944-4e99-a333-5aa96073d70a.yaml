@@ -1,0 +1,14 @@
+columnSuffix: eerybwbq
+contentColumnType: string(255)
+fieldGroup: fc60fa7d-ed36-45c2-9c49-d8ef1d0082d4 # Common
+handle: patronLink
+instructions: 'Full URL to a website -- https:// and all.'
+name: 'Patron Link'
+searchable: false
+settings:
+  maxLength: 255
+  types:
+    - url
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Url

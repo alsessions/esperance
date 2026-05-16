@@ -1,4 +1,4 @@
-dateModified: 1778798292
+dateModified: 1778957484
 elementSources:
   craft\elements\Category:
     -
@@ -212,6 +212,7 @@ meta:
     276fae0b-a1da-494a-96f0-2c243a8dd94b: 'Optimized Square' # Optimized Square
     407bfcd3-d085-4b1f-884a-379fed434969: Membership # Membership
     677a7d48-e545-414a-b433-1f02e04d5218: Store # Store
+    0695b293-f6ac-487e-b9b7-b2c4fd9f2481: Default # Default
     704b1aec-095b-4188-a865-c287388005dd: Library # Library
     747e2f9c-a411-4018-9b07-fb2ecfc14d1a: '400 high' # 400 high
     00763a73-63f3-493e-91fb-6e234dfcea3d: 'End Date' # End Date
@@ -225,6 +226,7 @@ meta:
     9357eb28-2a22-492e-b3de-bb52da924c4e: City # City
     17790c7c-b82b-4627-8987-9ca3ef979f8e: 'CTA Link' # CTA Link
     20659b38-c9e7-4a74-bd63-5ff9dacedf92: Photos # Photos
+    85843cc3-14c5-4399-a6c0-1b5ef4c2823a: Patrons # Patrons
     179918f7-943f-4046-a784-fbf529f91b38: Library # Library
     250107a8-b540-477c-a181-30873966eb94: Featured # Featured
     451937a7-2fa0-4f16-86c1-c73501f9d7d9: Photos # Photos
@@ -256,6 +258,7 @@ meta:
     cf74b3ea-7b9a-4c0f-8d56-6ee9eba748e4: 'News Image Optimized' # News Image Optimized
     d2bc249a-926e-4717-9fda-960f2c1d5dea: Donate # Donate
     d2eb18a9-ad0f-425d-bc08-979824a2b91d: 'Esperance History' # Esperance History
+    d46d583f-0944-4e99-a333-5aa96073d70a: 'Patron Link' # Patron Link
     daf14386-595d-486f-af5f-ea8c2b0f1344: Membership # Membership
     dba2cec3-c4ee-4cf4-9687-3b5015ec67f5: 'ISBN Number' # ISBN Number
     e1f14656-b837-40fb-b976-ec4d12a3addd: Hero # Hero
