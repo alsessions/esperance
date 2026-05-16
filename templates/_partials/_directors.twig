@@ -1,0 +1,10 @@
+{% set directors = craft.entries()
+.section('directors')
+.all() %}
+{% if directors | length %}
+    <div>
+        {% for director in directors %}
+            {{ director.title }}<br>
+        {% endfor %}
+    </div>
+{% endif %}
