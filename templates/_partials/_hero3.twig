@@ -1,63 +1,46 @@
 <div class="swiper mySwiper relative">
     <div class="swiper-wrapper">
-   
-
         {% for block in entry.hero.all()  %}
-
-
-
-
-{% set optimizedImages = block.image.one().optimizedHero %} 
-        <div class="swiper-slide flex flex-row lazyload"
-            style="background-image: url('{{ optimizedImages.srcWebp() }}');
-background-size: cover;
-background-repeat: no-repeat;
-background-position: center center;">
-
-            <div class=" text-white absolute bottom-0 h-auto bg-gray-900/70 w-full p-4">
-           <div class="max-w-7xl mx-auto">
-                <h2 class="text-xl md:text-xl  text-yellow-500 font-sans">{{ block.heroTitle }}
-                </h2>
-
-                <div class="max-w-6xl prose prose-sm md:prose-lg prose-p:text-zinc-100 mt-1 prose-p:mt-1">{{ block.description | markdown }}</div>
-            
-           </div>
-               
-
+            {% set optimizedImages = block.image.one().optimizedHero %}
+            <div class="swiper-slide flex flex-row lazyload"
+                style="background-image: url('{{ optimizedImages.srcWebp() }}');
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center center;">
+                <div class=" text-white absolute bottom-0 h-auto bg-gray-900/70 w-full p-4">
+                    <div class="max-w-7xl mx-auto">
+                        <h2 class="text-xl md:text-xl  text-yellow-500 font-sans">{{ block.heroTitle }}
+                        </h2>
+                        <div class="max-w-6xl prose prose-sm md:prose-lg prose-p:text-zinc-100 mt-1 prose-p:mt-1">{{ block.description | markdown }}</div>
+                    </div>
+                </div>
             </div>
-           
-        </div>
         {% endfor %}
-
     </div>
 </div>
-
 <!-- Initialize Swiper -->
 <script>
     var swiper = new Swiper(".mySwiper", {
-        spaceBetween: 30,
-        centeredSlides: true,
-        autoplay: {
-            delay: 7500,
-            disableOnInteraction: false,
-            pauseOnMouseEnter: false,
-        },
-        pagination: {
-            el: ".swiper-pagination",
-            clickable: true,
-        },
-        navigation: {
-            nextEl: ".swiper-button-new-last",
-            prevEl: ".swiper-button-new-next",
-        },
-
-        effect: 'fade',
-        fadeEffect: {
-            crossFade: true,
-            delay: 10000,
-        },
-        loop: true,
+    spaceBetween: 30,
+    centeredSlides: true,
+    autoplay: {
+    delay: 7500,
+    disableOnInteraction: false,
+    pauseOnMouseEnter: false,
+    },
+    pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+    },
+    navigation: {
+    nextEl: ".swiper-button-new-last",
+    prevEl: ".swiper-button-new-next",
+    },
+    effect: 'fade',
+    fadeEffect: {
+    crossFade: true,
+    delay: 10000,
+    },
+    loop: true,
     });
-
-
 </script>

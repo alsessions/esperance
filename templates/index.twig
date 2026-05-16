@@ -1,206 +1,189 @@
 <!DOCTYPE html>
 <html lang="en-US">
-
-<head>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta charset="utf-8" />
-    {% hook "seo" %}
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
-    <meta name="referrer" content="origin-when-cross-origin" />
-    <link href="/css/styles.css" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Open+Sans:wght@300;400;500&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
-    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.3.5/dist/alpine.min.js" defer></script>
-    <script src="/js/lazysizes.min.js" async=""></script>
-    <style>
-        [x-cloak] {
+    <head>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta charset="utf-8" />
+        {% hook "seo" %}
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+        <meta name="referrer" content="origin-when-cross-origin" />
+        <link href="/css/styles.css" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Open+Sans:wght@300;400;500&display=swap"
+            rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+        <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.3.5/dist/alpine.min.js" defer></script>
+        <script src="/js/lazysizes.min.js" async=""></script>
+        <style>
+            [x-cloak] {
             visibility: hidden;
             overflow: hidden;
-        }
-    </style>
-
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
-    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
-    <meta name="msapplication-TileColor" content="#da532c">
-    <meta name="theme-color" content="#ffffff">
-
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-</head>
-
-<body class="bg-zinc-50">
-    {% include '_partials/_nav2.twig' %}
-    {% include '_partials/_hero2.twig' %} <!-- no slideshow, _hero.twig has slideshow -->
-
-    <div class="w-full">
-        <div class="max-w-6xl mx-auto pt-10 pb-10 md:py-20 px-4 grid md:grid-cols-2 gap-10">
-            <div class="prose md:prose-lg max-w-none prose-p:font-serif">
-                <p>The Esperance Historical Society was founded in 1969 and one-year later the museum opened its doors in the former village one-room schoolhouse.</p>
-                <p>The museum displays artifacts, photographs, old farm equipment and other items that reveal the story of a rural upstate New York village centered on agriculture and trade along the Great Western Turnpike.</p>
-            </div>
-            <div class="hidden md:block">
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d25571.4711738421!2d-74.2737569810362!3d42.76383439079226!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xc087be0f55dfd860!2sEsperance%20Historical%20Society!5e0!3m2!1sen!2sus!4v1656528373580!5m2!1sen!2sus"
-                    style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
-                    class=" h-[450px] w-full"></iframe>
-                <p class="my-4 text-center">Open Weekends 1-4PM, Memorial thru Labor Days</p>
+            }
+        </style>
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+        <link rel="manifest" href="/site.webmanifest">
+        <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+        <meta name="msapplication-TileColor" content="#da532c">
+        <meta name="theme-color" content="#ffffff">
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    </head>
+    <body class="bg-zinc-50">
+        {% include '_partials/_nav2.twig' %}
+        {% include '_partials/_hero2.twig' %} <!-- no slideshow, _hero.twig has slideshow -->
+        <div class="w-full">
+            <div class="max-w-6xl mx-auto pt-10 pb-10 md:py-20 px-4 grid md:grid-cols-2 gap-10">
+                <div class="prose md:prose-lg max-w-none prose-p:font-serif">
+                    <p>The Esperance Historical Society was founded in 1969 and one-year later the museum opened its doors in the former village one-room schoolhouse.</p>
+                    <p>The museum displays artifacts, photographs, old farm equipment and other items that reveal the story of a rural upstate New York village centered on agriculture and trade along the Great Western Turnpike.</p>
+                </div>
+                <div class="hidden md:block">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d25571.4711738421!2d-74.2737569810362!3d42.76383439079226!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xc087be0f55dfd860!2sEsperance%20Historical%20Society!5e0!3m2!1sen!2sus!4v1656528373580!5m2!1sen!2sus"
+                        style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                        class=" h-[450px] w-full"></iframe>
+                    <p class="my-4 text-center">Open Weekends 1-4PM, Memorial thru Labor Days</p>
+                </div>
             </div>
         </div>
-    </div>
-
-    <div class="w-full pt-20 px-4 mt-6 bg-gradient-to-b from-amber-500/10 to-amber-700/10">
-        <div class="max-w-7xl mx-auto pb-16">
-            <!-- Featured matrix field -->
-            <div class="grid lg:grid-cols-3 gap-2 md:gap-x-6 gap-y-10">
-                {% for block in entry.featured.all() %}
-                <script>
-                    AOS.init();
-                </script>
-                <div class="rounded overflow-hidden ring-1 ring-yellow-300/50 relative h-full mb-20 shadow-lg"
-                    data-aos="fade-in" data-aos-duration="1500" data-aos-easing="ease-in-out">
-                    <div class="bg-white h-full relative">
-                        <a href="{{ block.ctaLink }}">
-                            {% set optimizedImages = block.featuredImage.one().optimizedLandscape %}
-                            <picture>
-                                <source data-srcset="{{ optimizedImages.srcsetWebP() }}" data-sizes="100vw" type="image/webp" />
-                                <img class="lazyload w-full aspect-video"
-                                    src="{{ optimizedImages.placeholderImage() }}"
-                                    data-srcset="{{ optimizedImages.srcset() }}" data-sizes="100vw" />
-                            </picture>
-                        </a>
-                        <h2 class="text-xl text-center font-medium px-2 mt-4">
-                            <a href="{{ block.ctaLink }}">{{ block.featuredItem }}</a>
-                        </h2>
-                        <div class="prose p-2 bg-white">
-                            {{ block.description | markdown | typogrify }}
-                            <div class="mx-auto">
-                                <button
-                                    class="not-prose absolute bottom-0 right-0 left-0 mx-auto py-2 px-5 uppercase hover:bg-gray-200 bg-gray-100 text-black shadow"
-                                    >
-                                    <a href="{{ block.ctaLink }}" class="text-base font-medium tracking-widest">
-                                        {{ block.ctaTitle }}
-                                    </a>
-                                </button>
+        <div class="w-full pt-20 px-4 mt-6 bg-gradient-to-b from-amber-500/10 to-amber-700/10">
+            <div class="max-w-7xl mx-auto pb-16">
+                <!-- Featured matrix field -->
+                <div class="grid lg:grid-cols-3 gap-2 md:gap-x-6 gap-y-10">
+                    {% for block in entry.featured.all() %}
+                        <script>
+                            AOS.init();
+                        </script>
+                        <div class="rounded overflow-hidden ring-1 ring-yellow-300/50 relative h-full mb-20 shadow-lg"
+                            data-aos="fade-in" data-aos-duration="1500" data-aos-easing="ease-in-out">
+                            <div class="bg-white h-full relative">
+                                <a href="{{ block.ctaLink }}">
+                                    {% set optimizedImages = block.featuredImage.one().optimizedLandscape %}
+                                    <picture>
+                                        <source data-srcset="{{ optimizedImages.srcsetWebP() }}" data-sizes="100vw" type="image/webp" />
+                                        <img class="lazyload w-full aspect-video"
+                                            src="{{ optimizedImages.placeholderImage() }}"
+                                            data-srcset="{{ optimizedImages.srcset() }}" data-sizes="100vw" />
+                                    </picture>
+                                </a>
+                                <h2 class="text-xl text-center font-medium px-2 mt-4">
+                                    <a href="{{ block.ctaLink }}">{{ block.featuredItem }}</a>
+                                </h2>
+                                <div class="prose p-2 bg-white">
+                                    {{ block.description | markdown | typogrify }}
+                                    <div class="mx-auto">
+                                        <button
+                                            class="not-prose absolute bottom-0 right-0 left-0 mx-auto py-2 px-5 uppercase hover:bg-gray-200 bg-gray-100 text-black shadow"
+                                            >
+                                            <a href="{{ block.ctaLink }}" class="text-base font-medium tracking-widest">
+                                                {{ block.ctaTitle }}
+                                            </a>
+                                        </button>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-                {% endfor %}
-            </div>
-        </div>
-    </div>
-
-    <!-- Begin video -->
-    <section class="px-4 w-full mx-auto py-20 bg-zinc-50">
-        <div class="py-6 max-w-6xl mx-auto">
-            <h2 class="text-center text-2xl md:text-4xl mb-12 font-medium">A Film by Willard Martin</h2>
-            <iframe src="https://player.vimeo.com/video/853172106?h=553536ddd7" frameborder="0" allow="autoplay; fullscreen; picture-in-picture"
-                class="mx-auto w-full aspect-video" allowfullscreen></iframe>
-            <p class="italic my-2">The Decline of Dairy Farming in the Town of Esperance from <a href="https://vimeo.com/user22879166" class="text-blue-500">Willard Martin</a>.</p>
-        </div>
-    </section>
-
-    <!-- Begin Fundraising -->
-    <section class="py-32 px-4 w-full bg-gradient-to-b from-amber-500/10 to-amber-700/10">
-        <div class="mx-auto max-w-4xl py-4 text-center bg-white/30 px-4 backdrop-blur-sm backdrop-contrast-75 rounded">
-            <h2 class="text-4xl tracking-wide my-4 font-bold">Support the Museum</h2>
-            <p class="text-xl text-gray-900 uppercase font-medium leading-relaxed">The Esperance Museum is a 501(c)(3) corporation and depends on the community for support. Please consider donating or becoming a member.</p>
-            <p class="mt-2 text-gray-900">All contributions are tax deductible to the full extent of the law.</p>
-            <div class="my-6">
-                <a href="/support">
-                    <button class="bg-blue-500 text-white hover:bg-blue-600 font-bold uppercase text-sm px-5 py-3 rounded shadow hover:shadow-md outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150" type="button">
-                        <i class="fa-solid fa-question mr-2"></i>How To Help
-                    </button>
-                </a>
-            </div>
-        </div>
-    </section>
-    <!-- End Fundraising -->
-
-    <section class="py-20 px-4 w-full mx-auto">
-        <div class="grid md:grid-cols-2 max-w-6xl mx-auto gap-10">
-            <div class="mb-6">
-                <h2 class="text-xl text-amber-700 uppercase font-medium tracking-wide">News from the Museum</h2>
-                {# Create an entry query with the 'section' and 'limit' parameters #}
-                {% set myEntryQuery = craft.entries().section('news').limit(10) %}
-                {# Fetch the entries #}
-                {% set entries = myEntryQuery.all() %}
-                {# Display the entries #}
-                <div class="grid grid-cols-1 gap-4 mt-6">
-                    {% for entry in entries %}
-                    <article class="bg-gray-50 hover:bg-gray-100 rounded shadow hover:shadow-md transition-all duration-200 p-4 flex relative">
-                        <a href="{{ entry.url }}" class="absolute inset-0 z-10" aria-label="{{ entry.title }}"></a>
-                        <div class="mr-3 mt-1 flex-shrink-0">
-                            <svg class="w-6 h-6 text-amber-700" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z" />
-                            </svg>
-                        </div>
-                        <div class="flex flex-col">
-                            <h3 class="my-0 text-gray-800 font-sans text-sm">{{ entry.dateUpdated | date("M d, Y") }}</h3>
-                            <h2 class="mt-1 mb-0 text-lg font-sans">
-                                <a href="{{ entry.url }}" class="text-amber-700 font-bold relative z-20 hover:underline">{{ entry.title }}</a>
-                            </h2>
-                        </div>
-                    </article>
                     {% endfor %}
                 </div>
             </div>
-            <div class="mb-6">
-                <h2 class="text-xl text-amber-700 uppercase font-medium tracking-wide">Upcoming Events</h2>
-         {# Fetch sticky entries #}
-        {% set stickyEntries = craft.entries()
-          .section('exhibits')
-          .sticky(true)
-          .orderBy('startDate asc')
-          .limit(10)
-          .all() %}
-
-        {# Fetch upcoming entries #}
-        {% set upcomingEntries = craft.entries()
-          .section('exhibits')
-          .startDate('>= '~ now|atom)
-          .orderBy('startDate asc')
-          .limit(10)
-          .all() %}
-
-        {# Merge and sort entries: sticky first, then by startDate #}
-
-        {% set entries = stickyEntries|merge(upcomingEntries)|unique %}
-        
-        {% set entries = entries|sort((a, b) => b.sticky <=> a.sticky ?: a.startDate <=> b.startDate) %}
-
-        {# Display the entries #}
-        {% for entry in entries %}
-         <div class="grid grid-cols-1 gap-4 mt-6">
-                <article class="bg-gray-50 hover:bg-gray-100 rounded shadow hover:shadow-md transition-all duration-200 p-4 flex relative">
-                    <a href="{{ entry.url() }}" class="absolute inset-0 z-10" aria-label="{{ entry.title }}"></a>
-                    <div class="mr-3 mt-1 flex-shrink-0">
-                        <svg class="w-6 h-6 text-amber-700" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z" />
-                        </svg>
-                    </div>
-                    <div class="flex flex-col">
-                        <h3 class="my-0 text-gray-800 font-sans text-sm">{{ entry.startDate | date("M d, Y") }}{% if entry.endDate|length %} - {{ entry.endDate | date("M d, Y") }}{% endif %}</h3>
-                        <h2 class="mt-1 mb-0 text-lg font-sans">
-                            <a href="{{ entry.url() }}" class="text-amber-700 font-bold relative z-20 hover:underline">{{ entry.title }}</a>
-                        </h2>
-                    </div>
-                </article>
-                {% endfor %}
-                    </div>
-
-            </div>
         </div>
-    </section>
-
-    {% include '_partials/_footer.twig' %}
-</body>
-
+        <!-- Begin video -->
+        <section class="px-4 w-full mx-auto py-20 bg-zinc-50">
+            <div class="py-6 max-w-6xl mx-auto">
+                <h2 class="text-center text-2xl md:text-4xl mb-12 font-medium">A Film by Willard Martin</h2>
+                <iframe src="https://player.vimeo.com/video/853172106?h=553536ddd7" frameborder="0" allow="autoplay; fullscreen; picture-in-picture"
+                    class="mx-auto w-full aspect-video" allowfullscreen></iframe>
+                <p class="italic my-2">The Decline of Dairy Farming in the Town of Esperance from <a href="https://vimeo.com/user22879166" class="text-blue-500">Willard Martin</a>.</p>
+            </div>
+        </section>
+        <!-- Begin Fundraising -->
+        <section class="py-32 px-4 w-full bg-gradient-to-b from-amber-500/10 to-amber-700/10">
+            <div class="mx-auto max-w-4xl py-4 text-center bg-white/30 px-4 backdrop-blur-sm backdrop-contrast-75 rounded">
+                <h2 class="text-4xl tracking-wide my-4 font-bold">Support the Museum</h2>
+                <p class="text-xl text-gray-900 uppercase font-medium leading-relaxed">The Esperance Museum is a 501(c)(3) corporation and depends on the community for support. Please consider donating or becoming a member.</p>
+                <p class="mt-2 text-gray-900">All contributions are tax deductible to the full extent of the law.</p>
+                <div class="my-6">
+                    <a href="/support">
+                        <button class="bg-blue-500 text-white hover:bg-blue-600 font-bold uppercase text-sm px-5 py-3 rounded shadow hover:shadow-md outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150" type="button">
+                            <i class="fa-solid fa-question mr-2"></i>How To Help
+                        </button>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <!-- End Fundraising -->
+        <section class="py-20 px-4 w-full mx-auto">
+            <div class="grid md:grid-cols-2 max-w-6xl mx-auto gap-10">
+                <div class="mb-6">
+                    <h2 class="text-xl text-amber-700 uppercase font-medium tracking-wide">News from the Museum</h2>
+                    {# Create an entry query with the 'section' and 'limit' parameters #}
+                    {% set myEntryQuery = craft.entries().section('news').limit(10) %}
+                    {# Fetch the entries #}
+                    {% set entries = myEntryQuery.all() %}
+                    {# Display the entries #}
+                    <div class="grid grid-cols-1 gap-4 mt-6">
+                        {% for entry in entries %}
+                            <article class="bg-gray-50 hover:bg-gray-100 rounded shadow hover:shadow-md transition-all duration-200 p-4 flex relative">
+                                <a href="{{ entry.url }}" class="absolute inset-0 z-10" aria-label="{{ entry.title }}"></a>
+                                <div class="mr-3 mt-1 flex-shrink-0">
+                                    <svg class="w-6 h-6 text-amber-700" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z" />
+                                    </svg>
+                                </div>
+                                <div class="flex flex-col">
+                                    <h3 class="my-0 text-gray-800 font-sans text-sm">{{ entry.dateUpdated | date("M d, Y") }}</h3>
+                                    <h2 class="mt-1 mb-0 text-lg font-sans">
+                                        <a href="{{ entry.url }}" class="text-amber-700 font-bold relative z-20 hover:underline">{{ entry.title }}</a>
+                                    </h2>
+                                </div>
+                            </article>
+                        {% endfor %}
+                    </div>
+                </div>
+                <div class="mb-6">
+                    <h2 class="text-xl text-amber-700 uppercase font-medium tracking-wide">Upcoming Events</h2>
+                    {# Fetch sticky entries #}
+                    {% set stickyEntries = craft.entries()
+                    .section('exhibits')
+                    .sticky(true)
+                    .orderBy('startDate asc')
+                    .limit(10)
+                    .all() %}
+                    {# Fetch upcoming entries #}
+                    {% set upcomingEntries = craft.entries()
+                    .section('exhibits')
+                    .startDate('>= '~ now|atom)
+                    .orderBy('startDate asc')
+                    .limit(10)
+                    .all() %}
+                    {# Merge and sort entries: sticky first, then by startDate #}
+                    {% set entries = stickyEntries|merge(upcomingEntries)|unique %}
+                    {% set entries = entries|sort((a, b) => b.sticky <=> a.sticky ?: a.startDate <=> b.startDate) %}
+                    {# Display the entries #}
+                    {% for entry in entries %}
+                        <div class="grid grid-cols-1 gap-4 mt-6">
+                            <article class="bg-gray-50 hover:bg-gray-100 rounded shadow hover:shadow-md transition-all duration-200 p-4 flex relative">
+                                <a href="{{ entry.url() }}" class="absolute inset-0 z-10" aria-label="{{ entry.title }}"></a>
+                                <div class="mr-3 mt-1 flex-shrink-0">
+                                    <svg class="w-6 h-6 text-amber-700" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z" />
+                                    </svg>
+                                </div>
+                                <div class="flex flex-col">
+                                    <h3 class="my-0 text-gray-800 font-sans text-sm">{{ entry.startDate | date("M d, Y") }}{% if entry.endDate|length %} - {{ entry.endDate | date("M d, Y") }}{% endif %}</h3>
+                                    <h2 class="mt-1 mb-0 text-lg font-sans">
+                                        <a href="{{ entry.url() }}" class="text-amber-700 font-bold relative z-20 hover:underline">{{ entry.title }}</a>
+                                    </h2>
+                                </div>
+                            </article>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </section>
+        {% include '_partials/_footer.twig' %}
+    </body>
 </html>

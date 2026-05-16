@@ -1,11 +1,9 @@
 {% set patrons = craft.entries()
-    .section('patrons')
-    .all() %}
-
+.section('patrons')
+.all() %}
 <h2 class="text-xl text-center mb-8 mt-40 ">
     Thank You To Our Patrons
 </h2>
-
 {% if patrons | length %}
     <div class="grid gap-4 md:grid-cols-3">
         {% for patron in patrons %}

@@ -1,48 +1,34 @@
-{% include '_partials/_head.twig' %}    
-
+{% include '_partials/_head.twig' %}
 <body class="bg-zinc-100">
-    {% include '_partials/_nav2.twig' %}      
+    {% include '_partials/_nav2.twig' %}
     <main class="max-w-6xl mx-auto py-20  px-4 bg-zinc-100 min-h-screen">
- <div class="md:grid grid-cols-2  gap-6">
-    <div>
-
-
-
-        <h1 class="text-xl md:text-2xl text-yellow-900">
-            {{ entry.title | widont }}
-        </h1>
-        <div class="my-10">
-            {% if entry.bookAuthor | length %}
-        <p class="mb-1"><strong>Author:</strong> {{ entry.bookAuthor }}</p>
-        {% endif %}
-        {% if entry.publisher | length %}
-        <p class="mb-1"><strong>Publisher:</strong> {{ entry.publisher }}</p>
-        {% endif %}
-
-      {% if entry.date | length %}
-        <p class="mb-1"><strong>Date:</strong> {{ entry.date }}</p>
-        {% endif %}
-   
-        <p class="mb-1"><strong>Accession #:</strong> {{ entry.accessionNumber }}</p>
-        
-        <p><strong>Call Number:</strong> {{ entry.callNumber }}</p>
-        <!--<p><strong>ISBN Number:</strong> {{ entry.isbnNumber }}</p>-->
+        <div class="md:grid grid-cols-2  gap-6">
+            <div>
+                <h1 class="text-xl md:text-2xl text-yellow-900">
+                    {{ entry.title | widont }}
+                </h1>
+                <div class="my-10">
+                    {% if entry.bookAuthor | length %}
+                        <p class="mb-1"><strong>Author:</strong> {{ entry.bookAuthor }}</p>
+                    {% endif %}
+                    {% if entry.publisher | length %}
+                        <p class="mb-1"><strong>Publisher:</strong> {{ entry.publisher }}</p>
+                    {% endif %}
+                    {% if entry.date | length %}
+                        <p class="mb-1"><strong>Date:</strong> {{ entry.date }}</p>
+                    {% endif %}
+                    <p class="mb-1"><strong>Accession #:</strong> {{ entry.accessionNumber }}</p>
+                    <p><strong>Call Number:</strong> {{ entry.callNumber }}</p>
+                    <!--<p><strong>ISBN Number:</strong> {{ entry.isbnNumber }}</p>-->
+                </div>
+            </div>
+            <div class="md:text-right">
+                <form action="{{ url('search/results-books') }}">
+                    <input type="search" name="q" aria-label="Search" placeholder="Search Again" class="py-1 px-2 rounded my-2">
+                    <button type="submit" class="border border-1 border-orange-800 bg-orange-900  text-white py-1 px-2 ml-2 rounded">Go</button>
+                </form>
+            </div>
         </div>
-
-
-    </div>
-
-    <div class="md:text-right">
-        <form action="{{ url('search/results-books') }}">
-            <input type="search" name="q" aria-label="Search" placeholder="Search Again" class="py-1 px-2 rounded my-2">
-                <button type="submit" class="border border-1 border-orange-800 bg-orange-900  text-white py-1 px-2 ml-2 rounded">Go</button>
-             
-            </form>
-    </div>
-
- </div>
-
-
     </main>
     {% include '_partials/_footer.twig' %}
 </body>

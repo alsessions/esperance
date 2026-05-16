@@ -1,119 +1,84 @@
-{% include '_partials/_head.twig' %}    
-
+{% include '_partials/_head.twig' %}
 <body class="bg-orange-50/30">
-    {% include '_partials/_nav2.twig' %}      
+    {% include '_partials/_nav2.twig' %}
     <main class="max-w-4xl mx-auto py-10  px-4">
-    {% block content %}
-    <article id="lightgallery">
-    <h1 class="text-3xl md:text-4xl  text-yellow-900">{{ entry.title | widont }}</h1>
-    <h2 class=" font-sans mt-2 mb-10 text-lg md:text-lg font-medium text-yellow-900">{{ entry.postDate | date("F d, Y") }}</h3>
-
-
-     {% set optimizedImages = entry.newsImage.one().newsImageOptimized %}
-
-     <picture>
-         <source data-srcset="{{ optimizedImages.srcsetWebP() }}" 
-                 data-sizes="100vw"
-                 type="image/webp" />
-                
-
-         <img class="lazyload w-full h-auto shadow-lg border-2 border-gray-700 rounded-sm"
-              
-              src="{{ optimizedImages.placeholderImage() }}"
-              data-srcset="{{ optimizedImages.srcset() }}"
-              data-sizes="100vw" />
-     
-      
-               
-      </picture>
-
-    <div  class="prose prose-lg prose-headings:font-normal prose-p:font-serif max-w-none mt-10">
-            {{ entry.richText}}
-            </div>
-
-
-<!-- Begin matrix Two -->
-<div class=" my-4 prose prose-lg prose-p:font-serif max-w-none mb-20">
-{% for block in entry.blogPost.all() %}
-  {% if block.type == "imageLeft" %}
-    {% set image = block.image.one() %}
-  
-    {% if image %}
-    <div class="float-left pt-2 rounded pr-6 max-w-[450px] mb-0 prose-lg prose-p:font-serif">
-        <img src="{{ image.getUrl() }}" 
-          width="{{ image.getWidth() }}" 
-          height="{{ image.getHeight() }}" 
-          alt="{{ image.title }}"
-          class="mb-0 mt-0 inline-block"
-          ><br><span class="text-gray-500 inline-block text-base italic pt-1 px-2">{{ block.caption | raw }}</span>
-    </div> 
-    <div class="prose prose-lg prose-p:font-serif max-w-none">  
-    {{ block.text | markdown}}
-    </div>
-    {% endif %}
-
-   
-  {% elseif block.type == "text" %}
-<div class="prose prose-lg prose-p:font-serif max-w-none">
-{{ block.text }}  
-</div>
-  {% elseif block.type == "centeredImage" %}
-   {% set image = block.image.one() %}
-  
-    {% if image %}
-    <div class=" rounded py-4 px-2 max-w-full mb-0 not-prose">
-        <img src="{{ image.getUrl() }}" 
-          width="{{ image.getWidth() }}" 
-          height="{{ image.getHeight() }}" 
-          alt="{{ image.title }}"
-          class="mb-0 mt-0 mx-auto"
-          >
-          {% if block.caption | length %}
-          <br><span class="text-gray-500 inline-block text-base italic pt-1 px-2">{{ block.caption | raw }}</span>
-          {% endif %}
-    </div>   
-    {% endif %}
-
-  {% endif %}
-{% endfor %}
-
-
-</div>
-
-
-{% include '_partials/_patrons' %}
-
-  
-            {% set params = craft.entries.section('news').orderBy('title asc') %}
-
-            {# Get the prev/next elements #}
-            {% set prevEntry = entry.getPrev(params) %}
-            {% set nextEntry = entry.getNext(params) %}
-
-            {# And make sure to only output the links if the element exists #}
-            <div class="flex justify-between pb-2 md:pb-6 mt-20">
-              
+        {% block content %}
+            <article id="lightgallery">
+                <h1 class="text-3xl md:text-4xl  text-yellow-900">{{ entry.title | widont }}</h1>
+                <h2 class=" font-sans mt-2 mb-10 text-lg md:text-lg font-medium text-yellow-900">{{ entry.postDate | date("F d, Y") }}</h3>
+                {% set optimizedImages = entry.newsImage.one().newsImageOptimized %}
+                <picture>
+                    <source data-srcset="{{ optimizedImages.srcsetWebP() }}"
+                        data-sizes="100vw"
+                        type="image/webp" />
+                    <img class="lazyload w-full h-auto shadow-lg border-2 border-gray-700 rounded-sm"
+                        src="{{ optimizedImages.placeholderImage() }}"
+                        data-srcset="{{ optimizedImages.srcset() }}"
+                        data-sizes="100vw" />
+                </picture>
+                <div  class="prose prose-lg prose-headings:font-normal prose-p:font-serif max-w-none mt-10">
+                    {{ entry.richText}}
+                </div>
+                <!-- Begin matrix Two -->
+                <div class=" my-4 prose prose-lg prose-p:font-serif max-w-none mb-20">
+                    {% for block in entry.blogPost.all() %}
+                        {% if block.type == "imageLeft" %}
+                            {% set image = block.image.one() %}
+                            {% if image %}
+                                <div class="float-left pt-2 rounded pr-6 max-w-[450px] mb-0 prose-lg prose-p:font-serif">
+                                    <img src="{{ image.getUrl() }}"
+                                        width="{{ image.getWidth() }}"
+                                        height="{{ image.getHeight() }}"
+                                        alt="{{ image.title }}"
+                                        class="mb-0 mt-0 inline-block"
+                                        ><br><span class="text-gray-500 inline-block text-base italic pt-1 px-2">{{ block.caption | raw }}</span>
+                                </div>
+                                <div class="prose prose-lg prose-p:font-serif max-w-none">
+                                    {{ block.text | markdown}}
+                                </div>
+                            {% endif %}
+                        {% elseif block.type == "text" %}
+                            <div class="prose prose-lg prose-p:font-serif max-w-none">
+                                {{ block.text }}
+                            </div>
+                        {% elseif block.type == "centeredImage" %}
+                            {% set image = block.image.one() %}
+                            {% if image %}
+                                <div class=" rounded py-4 px-2 max-w-full mb-0 not-prose">
+                                    <img src="{{ image.getUrl() }}"
+                                        width="{{ image.getWidth() }}"
+                                        height="{{ image.getHeight() }}"
+                                        alt="{{ image.title }}"
+                                        class="mb-0 mt-0 mx-auto"
+                                        >
+                                    {% if block.caption | length %}
+                                        <br><span class="text-gray-500 inline-block text-base italic pt-1 px-2">{{ block.caption | raw }}</span>
+                                    {% endif %}
+                                </div>
+                            {% endif %}
+                        {% endif %}
+                    {% endfor %}
+                </div>
+                {% include '_partials/_patrons' %}
+                {% set params = craft.entries.section('news').orderBy('title asc') %}
+                {# Get the prev/next elements #}
+                {% set prevEntry = entry.getPrev(params) %}
+                {% set nextEntry = entry.getNext(params) %}
+                {# And make sure to only output the links if the element exists #}
+                <div class="flex justify-between pb-2 md:pb-6 mt-20">
                     {% if prevEntry %}
                         <a href="{{ prevEntry.url }}" class=" text-blue-600 hover:text-blue-400 ">&larr; Previously</a>
                     {% else %}
-            &nbsp;
-              {% endif %}
-                                    
-                {% if nextEntry %}
-                    <a href="{{ nextEntry.url }}"class="text-blue-600  hover:text-blue-400 ">Next &rarr;</a>
+                        &nbsp;
+                    {% endif %}
+                    {% if nextEntry %}
+                        <a href="{{ nextEntry.url }}"class="text-blue-600  hover:text-blue-400 ">Next &rarr;</a>
                     {% else %}
-                    &nbsp;
-                        {% endif %}
-                    
+                        &nbsp;
+                    {% endif %}
                 </div>
-     
-
-        </article>
-     
-
-
-    {% endblock %}
-
+            </article>
+        {% endblock %}
     </main>
     {% include '_partials/_footer.twig' %}
 </body>

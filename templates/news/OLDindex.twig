@@ -1,46 +1,36 @@
-{% include '_partials/_head.twig' %}    
-
+{% include '_partials/_head.twig' %}
 <body>
     {% include '_partials/_nav.twig' %}
     <main class="max-w-6xl mx-auto py-20 grid md:grid-cols-2 gap-10 px-4 rounded">
         {# Create an entry query with the 'section' and 'limit' parameters #}
         {% set myEntryQuery = craft.entries()
-          .section('news')
-          .limit(10) %}
-
+        .section('news')
+        .limit(10) %}
         {# Fetch the entries #}
         {% set entries = myEntryQuery.all() %}
-
         {# Display the entries #}
         {% for entry in entries %}
-        <article class="bg-white rounded-lg">
-
-          
-
-            {% set optimizedImages = entry.newsImage.one().newsImageOptimized %}
-     <picture>
-         <source data-srcset="{{ optimizedImages.srcsetWebP() }}" 
-                 data-sizes="100vw"
-                 type="image/webp" />
-         <img class="lazyload w-full h-auto rounded-t-lg"
-              src="{{ optimizedImages.placeholderImage() }}"
-              data-srcset="{{ optimizedImages.srcset() }}"
-              data-sizes="100vw" />
-      </picture>
-
-            <h2 class="mt-4 text-xl md:text-2xl text-center px-2 text-yellow-800"><a
+            <article class="bg-white rounded-lg">
+                {% set optimizedImages = entry.newsImage.one().newsImageOptimized %}
+                <picture>
+                    <source data-srcset="{{ optimizedImages.srcsetWebP() }}"
+                        data-sizes="100vw"
+                        type="image/webp" />
+                    <img class="lazyload w-full h-auto rounded-t-lg"
+                        src="{{ optimizedImages.placeholderImage() }}"
+                        data-srcset="{{ optimizedImages.srcset() }}"
+                        data-sizes="100vw" />
+                </picture>
+                <h2 class="mt-4 text-xl md:text-2xl text-center px-2 text-yellow-800"><a
                     href="{{ entry.url() }}">{{ entry.title }}</a></h2>
             <h3 class="text-center font-headings mt-1 text-lg text-yellow-900">{{ entry.postDate | date("M d, Y") }}</h3>
-                <div
-                    class="prose md:prose-lg max-w-none prose-a:no-underline prose-headings:font-normal prose-p:leading-normal mt-4 px-4 pb-4">
-                    {{ entry.richText | chop(limit=30, unit='w', append='...', allowedTags="<p>") | widont }}
+            <div
+                class="prose md:prose-lg max-w-none prose-a:no-underline prose-headings:font-normal prose-p:leading-normal mt-4 px-4 pb-4">
+                {{ entry.richText | chop(limit=30, unit='w', append='...', allowedTags="<p>") | widont }}
                 </div>
-        </article>
+            </article>
         {% endfor %}
-
-
     </main>
     {% include '_partials/_footer.twig' %}
 </body>
-
 </html>

@@ -1,66 +1,49 @@
-{% include '_partials/_head.twig' %}    
-
+{% include '_partials/_head.twig' %}
 <body>
     {% include '_partials/_nav2.twig' %}
     <main class="max-w-6xl mx-auto py-20  px-4 min-h-screen">
-
         <article>
-        <h1 class="text-3xl md:text-5xl text-center text-yellow-900">{{ entry.title | widont }}</h1>
-        <h2  class="text-xl md:text-2xl text-center text-yellow-800 mt-4">{{ entry.subTitle | widont }}</h2>
-       
-            
-               
-                <div  class="prose prose-lg prose-headings:font-normal max-w-none my-10 ">
+            <h1 class="text-3xl md:text-5xl text-center text-yellow-900">{{ entry.title | widont }}</h1>
+            <h2  class="text-xl md:text-2xl text-center text-yellow-800 mt-4">{{ entry.subTitle | widont }}</h2>
+            <div  class="prose prose-lg prose-headings:font-normal max-w-none my-10 ">
                 {{ entry.richText }}
-                </div>
-            </article>
+            </div>
+        </article>
         {# Create an entry query with the 'section' and 'limit' parameters #}
         {# Fetch sticky entries #}
         {% set stickyEntries = craft.entries()
-          .section('exhibits')
-          .sticky(true)
-          .orderBy('startDate asc')
-          .limit(10)
-          .all() %}
-
+        .section('exhibits')
+        .sticky(true)
+        .orderBy('startDate asc')
+        .limit(10)
+        .all() %}
         {# Fetch upcoming entries #}
         {% set upcomingEntries = craft.entries()
-          .section('exhibits')
-          .startDate('>= '~ now|atom)
-          .orderBy('startDate asc')
-          .limit(10)
-          .all() %}
-
+        .section('exhibits')
+        .startDate('>= '~ now|atom)
+        .orderBy('startDate asc')
+        .limit(10)
+        .all() %}
         {# Merge and sort entries: sticky first, then by startDate #}
         {% set entries = stickyEntries|merge(upcomingEntries)|unique %}
         {% set entries = entries|sort((a, b) => b.sticky <=> a.sticky ?: a.startDate <=> b.startDate) %}
-
         {# Display the entries #}
         {% for entry in entries %}
-        <article class="bg-white rounded-lg mb-10">
-
-          
-         
-
-            <h2 class="mt-4 text-xl md:text-2xl text-yellow-800 no-underline"><a
+            <article class="bg-white rounded-lg mb-10">
+                <h2 class="mt-4 text-xl md:text-2xl text-yellow-800 no-underline"><a
                     href="{{ entry.url() }}">{{ entry.title }}</a></h2>
-                    {% if entry.endDate | length %}
-                    <h3 class=" my-2 text-lg  text-yellow-900">{{ entry.startDate | date("M d, Y") }} - {{ entry.endDate | date("M d, Y") }}</h3>
-                
-                    {% else %}
-                
-                    <h3 class="my-2 text-lg  text-yellow-900">{{ entry.startDate | date("M d, Y @ g:iA") }}</h3>
-                    {% endif %}
-                <div
-                    class="prose md:prose-lg max-w-none prose-a:no-underline prose-headings:font-normal prose-p:leading-normal mt-4 pb-4">
-                    {{ entry.richText | chop(limit=30, unit='w', append='...', allowedTags="<p>") | widont }}
+            {% if entry.endDate | length %}
+                <h3 class=" my-2 text-lg  text-yellow-900">{{ entry.startDate | date("M d, Y") }} - {{ entry.endDate | date("M d, Y") }}</h3>
+            {% else %}
+                <h3 class="my-2 text-lg  text-yellow-900">{{ entry.startDate | date("M d, Y @ g:iA") }}</h3>
+            {% endif %}
+            <div
+                class="prose md:prose-lg max-w-none prose-a:no-underline prose-headings:font-normal prose-p:leading-normal mt-4 pb-4">
+                {{ entry.richText | chop(limit=30, unit='w', append='...', allowedTags="<p>") | widont }}
                 </div>
-        </article>
+            </article>
         {% endfor %}
-
-
     </main>
     {% include '_partials/_footer.twig' %}
 </body>
-
 </html>

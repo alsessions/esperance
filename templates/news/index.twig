@@ -1,106 +1,93 @@
 {% include '_partials/_head.twig' %}
-
 <body class="bg-white">
     {% include '_partials/_nav2.twig' %}
     <div class="my-20 max-w-6xl mx-auto px-4 prose">
         <h1 class="text-3xl md:text-5xl  text-yellow-900 mb-2">News &amp; Events</h1>
-    <div class="not-prose mt-10">
+        <div class="not-prose mt-10">
             <a href="/newsletters" class="inline-block px-2 py-1 rounded bg-blue-700 text-white hover:bg-blue-900 hover:text-white transition font-sans shadow border border-blue-800 font-semibold">Past Issues of "The Archive"</a>
-    </div>
-
+        </div>
         <div>
             <h2 class="text-2xl text-yellow-800 tracking-wide mb-6">
                 Upcoming Events</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                      {# Create an entry query with the 'section' and 'limit' parameters #}
-        {# Fetch sticky entries #}
-        {% set stickyEntries = craft.entries()
-          .section('exhibits')
-          .sticky(true)
-          .orderBy('startDate asc')
-          .limit(10)
-          .all() %}
-
-        {# Fetch upcoming entries #}
-        {% set upcomingEntries = craft.entries()
-          .section('exhibits')
-          .startDate('>= '~ now|atom)
-          .orderBy('startDate asc')
-          .limit(10)
-          .all() %}
-
-        {# Merge and sort entries: sticky first, then by startDate #}
-
-        {% set entries = stickyEntries|merge(upcomingEntries)|unique %}
-        
-        {% set entries = entries|sort((a, b) => b.sticky <=> a.sticky ?: a.startDate <=> b.startDate) %}
-
-        {# Display the entries #}
-        {% for entry in entries %}
-                <article class="not-prose bg-gray-50 rounded shadow-md border border-gray-100 p-4 h-full flex transition-all duration-200 hover:shadow-lg">
-                    <div class="mr-3 mt-1 flex-shrink-0">
-                        <svg class="w-7 h-7 text-yellow-800" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                        </svg>
-                    </div>
-                    <div class="flex flex-col">
-                      <h3 class=" my-2 text-lg  text-yellow-900">{{ entry.startDate | date("M d, Y") }} {% if  entry.endDate|length %} - {{  entry.endDate | date("M d, Y") }}{%endif%}</h3>       
-                        <h2 class="mt-0 mb-4 text-lg font-sans font-bold text-yellow-800">
-                            <a href="{{ entry.url() }}" class="no-underline hover:underline hover:underline-offset-2">{{ entry.title }}</a>
-                        </h2>
-                    </div>
-                </article>
+                {# Create an entry query with the 'section' and 'limit' parameters #}
+                {# Fetch sticky entries #}
+                {% set stickyEntries = craft.entries()
+                .section('exhibits')
+                .sticky(true)
+                .orderBy('startDate asc')
+                .limit(10)
+                .all() %}
+                {# Fetch upcoming entries #}
+                {% set upcomingEntries = craft.entries()
+                .section('exhibits')
+                .startDate('>= '~ now|atom)
+                .orderBy('startDate asc')
+                .limit(10)
+                .all() %}
+                {# Merge and sort entries: sticky first, then by startDate #}
+                {% set entries = stickyEntries|merge(upcomingEntries)|unique %}
+                {% set entries = entries|sort((a, b) => b.sticky <=> a.sticky ?: a.startDate <=> b.startDate) %}
+                {# Display the entries #}
+                {% for entry in entries %}
+                    <article class="not-prose bg-gray-50 rounded shadow-md border border-gray-100 p-4 h-full flex transition-all duration-200 hover:shadow-lg">
+                        <div class="mr-3 mt-1 flex-shrink-0">
+                            <svg class="w-7 h-7 text-yellow-800" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                            </svg>
+                        </div>
+                        <div class="flex flex-col">
+                            <h3 class=" my-2 text-lg  text-yellow-900">{{ entry.startDate | date("M d, Y") }} {% if  entry.endDate|length %} - {{  entry.endDate | date("M d, Y") }}{%endif%}</h3>
+                            <h2 class="mt-0 mb-4 text-lg font-sans font-bold text-yellow-800">
+                                <a href="{{ entry.url() }}" class="no-underline hover:underline hover:underline-offset-2">{{ entry.title }}</a>
+                            </h2>
+                        </div>
+                    </article>
                 {% endfor %}
             </div>
         </div>
     </div>
-
     <main class="min-h-screen">
         <div class="max-w-6xl mx-auto">
             <h2 class="text-2xl text-yellow-800 tracking-wide px-4 mb-6">
                 News from the Museum</h2>
         </div>
         <div class="max-w-6xl mx-auto pb-20 grid md:grid-cols-2 lg:grid-cols-3 gap-6 px-4 rounded">
-
             {# Create an entry query with the 'section' and 'limit' parameters #}
             {% set myEntryQuery = craft.entries()
             .section('news')
             .limit(10) %}
-
             {# Fetch the entries #}
             {% set entries = myEntryQuery.all() %}
-
             {# Display the entries #}
             {% for entry in entries %}
-            <article class="bg-gray-50 rounded shadow-md border border-gray-100 flex flex-col h-full transition-all duration-200 hover:shadow-lg">
-                {% set optimizedImages = entry.newsImage.one().newsImageOptimized %}
-                <a href="{{ entry.url() }}" class="block">
-                    <picture>
-                        <source data-srcset="{{ optimizedImages.srcsetWebP() }}" data-sizes="100vw" type="image/webp" />
-                        <img class="lazyload w-full h-auto rounded-t" src="{{ optimizedImages.placeholderImage() }}"
-                            data-srcset="{{ optimizedImages.srcset() }}" data-sizes="100vw" />
-                    </picture>
-                </a>
-                <div class="p-4 flex flex-col flex-grow">
-                    <div class="flex flex-col flex-grow">
-                        <h3 class="font-sans text-yellow-900 mt-0 mb-0">{{ entry.postDate | date("M d, Y") }}</h3>
-                        <h2 class="mt-2 mb-3 text-lg font-sans text-yellow-800"><a href="{{ entry.url() }}" class="no-underline hover:underline hover:underline-offset-2">{{ entry.title | widont }}</a></h2>
-
-                        {% if entry.richText | length %}
-                        <div class="max-w-none mt-auto pb-2">
-                            {{ entry.richText | chop(limit=15, unit='w', append='...', allowedTags="") | widont }}
+                <article class="bg-gray-50 rounded shadow-md border border-gray-100 flex flex-col h-full transition-all duration-200 hover:shadow-lg">
+                    {% set optimizedImages = entry.newsImage.one().newsImageOptimized %}
+                    <a href="{{ entry.url() }}" class="block">
+                        <picture>
+                            <source data-srcset="{{ optimizedImages.srcsetWebP() }}" data-sizes="100vw" type="image/webp" />
+                            <img class="lazyload w-full h-auto rounded-t" src="{{ optimizedImages.placeholderImage() }}"
+                                data-srcset="{{ optimizedImages.srcset() }}" data-sizes="100vw" />
+                        </picture>
+                    </a>
+                    <div class="p-4 flex flex-col flex-grow">
+                        <div class="flex flex-col flex-grow">
+                            <h3 class="font-sans text-yellow-900 mt-0 mb-0">{{ entry.postDate | date("M d, Y") }}</h3>
+                            <h2 class="mt-2 mb-3 text-lg font-sans text-yellow-800"><a href="{{ entry.url() }}" class="no-underline hover:underline hover:underline-offset-2">{{ entry.title | widont }}</a></h2>
+                            {% if entry.richText | length %}
+                                <div class="max-w-none mt-auto pb-2">
+                                    {{ entry.richText | chop(limit=15, unit='w', append='...', allowedTags="") | widont }}
+                                </div>
+                            {% endif %}
                         </div>
-                        {% endif %}
                     </div>
-                </div>
-            </article>
+                </article>
             {% endfor %}
         </div>
         <div class="max-w-6xl mx-auto mb-20">
-        {% include '_partials/_patrons' %}
+            {% include '_partials/_patrons' %}
         </div>
     </main>
     {% include '_partials/_footer.twig' %}
 </body>
-
 </html>
