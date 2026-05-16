@@ -1,10 +1,15 @@
-{% set directors = craft.entries()
-.section('directors')
-.all() %}
-{% if directors | length %}
-    <div>
-        {% for director in directors %}
-            {{ director.title }}<br>
+{% set boardMembers = craft.entries()
+    .section('boardMembers')
+    .orderBy('lft asc')
+    .all() %}
+
+{% if boardMembers | length %}
+    <ul>
+        {% for member in boardMembers %}
+            {% set role = member.role | trim %}
+            <li>
+                {{ member.title }}{% if role %}, {{ role }}{% endif %}
+            </li>
         {% endfor %}
-    </div>
+    </ul>
 {% endif %}

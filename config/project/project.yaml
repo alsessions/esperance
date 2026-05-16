@@ -198,7 +198,6 @@ meta:
     9fc5049f-5ce2-435c-9c5d-e55fbcf81e19: 'Public Schema' # Public Schema
     21fa595a-59c9-4716-b8d3-7063dac8e537: 'Newsletter Issues' # Newsletter Issues
     24a4eed0-28d2-4bd5-a239-557056a6c0f7: 'Newsletter File' # Newsletter File
-    29dede42-271b-498e-a36f-fe04b647cb29: Default # Default
     43dc2b5e-932f-4a83-8093-9bef14d0606b: News # News
     45ce9725-cb0c-426a-8289-636123e75090: Title # Title
     51eb2b77-8f9d-4c2f-8a8c-16eca4d439f7: 'Front Page' # Front Page
@@ -241,7 +240,6 @@ meta:
     a469f424-e319-400f-baca-d767dfe5eae3: Publisher # Publisher
     a2458d7e-018e-4d08-970d-ff0596268507: 'Photo Optimized' # Photo Optimized
     aee9fd99-7535-4cc1-a3fb-24d20d2a3852: 'News Images' # News Images
-    af642a31-e829-4105-a978-2967df19dab7: Directors # Directors
     b5e2f021-7a67-4ad3-89b2-c1158786081d: 'Blog Post' # Blog Post
     b24e5aba-18dc-4cb9-bf71-035e940001bd: Books # Books
     b51b1096-21b9-456a-a101-8de926cc6525: 'Centered Image' # Centered Image
