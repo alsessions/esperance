@@ -7,16 +7,16 @@
 </h2>
 
 {% if patrons | length %}
-    <div class="grid gap-6 md:grid-cols-3">
+    <div class="grid gap-4 md:grid-cols-3">
         {% for patron in patrons %}
             <div class="text-center text-gray-700 italic prose prose-a:no-underline prose-a:hover:underline prose-a:text-blue-600">
-                <h3 class="font-sans text-lg not-italic text-yellow-800">
+                <div class="font-sans text-lg not-italic text-yellow-800">
                     {% if patron.patronLink | length %}
                         <a href="{{ patron.patronLink }}" class="text-blue-600 hover:text-blue-800 hover:underline hover:underline-offset-2">{{ patron.title }}</a>
                     {% else %}
                         {{ patron.title }}
                     {% endif %}
-                </h3>
+                </div>
             </div>
         {% endfor %}
     </div>
