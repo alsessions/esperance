@@ -1815,10 +1815,6 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active {
   margin-bottom: 2.5rem;
 }
 
-.mb-12 {
-  margin-bottom: 3rem;
-}
-
 .mb-16 {
   margin-bottom: 4rem;
 }
@@ -1901,6 +1897,10 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active {
 
 .mt-6 {
   margin-top: 1.5rem;
+}
+
+.mt-8 {
+  margin-top: 2rem;
 }
 
 .mt-auto {
@@ -2077,6 +2077,18 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.resize-y {
+  resize: vertical;
+}
+
+.list-none {
+  list-style-type: none;
+}
+
 .columns-2 {
   -moz-columns: 2;
        columns: 2;
@@ -2152,8 +2164,17 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active {
        column-gap: 0.25rem;
 }
 
+.gap-x-6 {
+  -moz-column-gap: 1.5rem;
+       column-gap: 1.5rem;
+}
+
 .gap-y-10 {
   row-gap: 2.5rem;
+}
+
+.gap-y-2 {
+  row-gap: 0.5rem;
 }
 
 .space-x-2 > :not([hidden]) ~ :not([hidden]) {
@@ -2222,6 +2243,11 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active {
   border-color: rgb(243 244 246 / var(--tw-border-opacity));
 }
 
+.border-gray-300 {
+  --tw-border-opacity: 1;
+  border-color: rgb(209 213 219 / var(--tw-border-opacity));
+}
+
 .border-gray-400 {
   --tw-border-opacity: 1;
   border-color: rgb(156 163 175 / var(--tw-border-opacity));
@@ -2237,9 +2263,19 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active {
   border-color: rgb(31 41 55 / var(--tw-border-opacity));
 }
 
+.border-green-300 {
+  --tw-border-opacity: 1;
+  border-color: rgb(134 239 172 / var(--tw-border-opacity));
+}
+
 .border-orange-800 {
   --tw-border-opacity: 1;
   border-color: rgb(154 52 18 / var(--tw-border-opacity));
+}
+
+.border-red-300 {
+  --tw-border-opacity: 1;
+  border-color: rgb(252 165 165 / var(--tw-border-opacity));
 }
 
 .bg-blue-500 {
@@ -2276,6 +2312,11 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active {
   background-color: rgb(17 24 39 / 0.7);
 }
 
+.bg-green-50 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(240 253 244 / var(--tw-bg-opacity));
+}
+
 .bg-orange-50\/30 {
   background-color: rgb(255 247 237 / 0.3);
 }
@@ -2287,6 +2328,11 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active {
 
 .bg-pink-800\/30 {
   background-color: rgb(157 23 77 / 0.3);
+}
+
+.bg-red-50 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(254 242 242 / var(--tw-bg-opacity));
 }
 
 .bg-transparent {
@@ -2305,6 +2351,11 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active {
 .bg-yellow-700 {
   --tw-bg-opacity: 1;
   background-color: rgb(161 98 7 / var(--tw-bg-opacity));
+}
+
+.bg-yellow-900 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(113 63 18 / var(--tw-bg-opacity));
 }
 
 .bg-zinc-100 {
@@ -2343,6 +2394,10 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active {
 .object-center {
   -o-object-position: center;
      object-position: center;
+}
+
+.p-0 {
+  padding: 0px;
 }
 
 .p-2 {
@@ -2630,14 +2685,34 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active {
   color: rgb(17 24 39 / var(--tw-text-opacity));
 }
 
+.text-green-800 {
+  --tw-text-opacity: 1;
+  color: rgb(22 101 52 / var(--tw-text-opacity));
+}
+
 .text-indigo-500 {
   --tw-text-opacity: 1;
   color: rgb(99 102 241 / var(--tw-text-opacity));
 }
 
+.text-indigo-600 {
+  --tw-text-opacity: 1;
+  color: rgb(79 70 229 / var(--tw-text-opacity));
+}
+
 .text-orange-400 {
   --tw-text-opacity: 1;
   color: rgb(251 146 60 / var(--tw-text-opacity));
+}
+
+.text-red-700 {
+  --tw-text-opacity: 1;
+  color: rgb(185 28 28 / var(--tw-text-opacity));
+}
+
+.text-red-800 {
+  --tw-text-opacity: 1;
+  color: rgb(153 27 27 / var(--tw-text-opacity));
 }
 
 .text-white {
@@ -3010,6 +3085,11 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active {
   }
 }
 
+.hover\:border-gray-400:hover {
+  --tw-border-opacity: 1;
+  border-color: rgb(156 163 175 / var(--tw-border-opacity));
+}
+
 .hover\:bg-blue-400:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(96 165 250 / var(--tw-bg-opacity));
@@ -3038,6 +3118,11 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active {
 .hover\:bg-gray-200:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(229 231 235 / var(--tw-bg-opacity));
+}
+
+.hover\:bg-yellow-800:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(133 77 14 / var(--tw-bg-opacity));
 }
 
 .hover\:text-blue-400:hover {
@@ -3095,6 +3180,11 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active {
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
+.focus\:border-indigo-500:focus {
+  --tw-border-opacity: 1;
+  border-color: rgb(99 102 241 / var(--tw-border-opacity));
+}
+
 .focus\:bg-blue-700:focus {
   --tw-bg-opacity: 1;
   background-color: rgb(29 78 216 / var(--tw-bg-opacity));
@@ -3103,6 +3193,11 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active {
 .focus\:bg-gray-200:focus {
   --tw-bg-opacity: 1;
   background-color: rgb(229 231 235 / var(--tw-bg-opacity));
+}
+
+.focus\:bg-white:focus {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
 .focus\:text-gray-900:focus {
@@ -3143,8 +3238,27 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active {
   --tw-ring-color: rgb(96 165 250 / var(--tw-ring-opacity));
 }
 
+.focus\:ring-indigo-200:focus {
+  --tw-ring-opacity: 1;
+  --tw-ring-color: rgb(199 210 254 / var(--tw-ring-opacity));
+}
+
+.focus\:ring-indigo-500:focus {
+  --tw-ring-opacity: 1;
+  --tw-ring-color: rgb(99 102 241 / var(--tw-ring-opacity));
+}
+
+.focus\:ring-yellow-700:focus {
+  --tw-ring-opacity: 1;
+  --tw-ring-color: rgb(161 98 7 / var(--tw-ring-opacity));
+}
+
 .focus\:ring-opacity-75:focus {
   --tw-ring-opacity: 0.75;
+}
+
+.focus\:ring-offset-2:focus {
+  --tw-ring-offset-width: 2px;
 }
 
 .active\:bg-blue-800:active {
@@ -3209,6 +3323,10 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active {
   .sm\:-mx-6 {
     margin-left: -1.5rem;
     margin-right: -1.5rem;
+  }
+
+  .sm\:w-auto {
+    width: auto;
   }
 
   .sm\:grid-cols-2 {
