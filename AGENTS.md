@@ -31,6 +31,14 @@ This is a Craft CMS 4 website.
 - Do not edit generated project config manually unless necessary.
 - Plugins include: Image Optimize and SEOMatic
 
+## Contact Form
+
+- The contact form template is `templates/contact.twig` and submits to the Craft Contact Form plugin.
+- Notification recipients are configured in the Contact Form plugin settings and synchronized to `config/project/project.yaml` under `plugins.contact-form.settings.toEmail`.
+- Contact Form Extensions is enabled to save submissions to the database.
+- Use the Matt West reCAPTCHA integration rendered by `craft.recaptcha.render()`.
+- Keep reCAPTCHA disabled in Contact Form Extensions. Enabling both integrations causes Contact Form Extensions to validate the Matt West token as reCAPTCHA v3, resulting in an `invalid-input-response` exception and a 500 response.
+
 ## Tailwind
 
 - Use responsive mobile-first classes.
