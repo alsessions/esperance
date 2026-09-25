@@ -1,4 +1,4 @@
-dateModified: 1789497368
+dateModified: 1790354436
 elementSources:
   craft\elements\Category:
     -
@@ -291,11 +291,10 @@ plugins:
     schemaVersion: 1.0.0
     settings:
       allowAttachments: ''
-      allowedMessageFields: null
       prependSender: 'On behalf of'
       prependSubject: 'New message from Esperance Historical Museum'
       successFlashMessage: 'Your message has been sent.'
-      toEmail: 'fultonchain@gmail.com, info@esperancemuseum.org'
+      toEmail: 'fultonchain@gmail.com, info@esperancemuseum.org,esperancehistoricalsociety@gmail.com'
   contact-form-extensions:
     edition: standard
     enabled: false
