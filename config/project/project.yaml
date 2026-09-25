@@ -1,4 +1,4 @@
-dateModified: 1790354508
+dateModified: 1790355090
 elementSources:
   craft\elements\Category:
     -
@@ -307,7 +307,7 @@ plugins:
       enableRecaptchaOverride: ''
       enableTemplateOverwrite: ''
       notificationTemplate: ''
-      recaptcha: '1'
+      recaptcha: ''
       recaptchaDataBadge: bottomright
       recaptchaDebug: ''
       recaptchaHideBadge: ''
