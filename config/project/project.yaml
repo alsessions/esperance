@@ -1,4 +1,4 @@
-dateModified: 1790354436
+dateModified: 1790354508
 elementSources:
   craft\elements\Category:
     -
@@ -297,7 +297,7 @@ plugins:
       toEmail: 'fultonchain@gmail.com, info@esperancemuseum.org,esperancehistoricalsociety@gmail.com'
   contact-form-extensions:
     edition: standard
-    enabled: false
+    enabled: true
     schemaVersion: 1.0.1
     settings:
       confirmationSubject: ''
